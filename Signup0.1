@@ -1,0 +1,48 @@
+<!doctype html>
+<HTML>
+<center>
+<meta charset="UTF-8">
+<BODY style="background-color:#becfdf;">
+<font color="black"><H1 style="background-color:#7ea9d4;">도서관 관리 시스템<BR>[회원가입]</H1>
+<HR size=4>
+<UL type="disc">
+</ul>
+회원가입 창입니다<BR>정보를 입력하고 등록 버튼을 눌러주세요
+<SCRIPT language="javascript">
+
+function check() {
+	var blank = 0 ;
+	if (form1.username.value == "") 
+   		blank = 1 ;
+  	if (form1.userid.value == "") 
+    		blank = 1 ;
+  	if (form1.userpw.value == "") 
+     		blank = 1 ;
+  	if (blank ==1) {
+         	alert("모든 정보를 입력해주세요") ;
+		return (false)
+	 } 
+	else {
+	return (true) ; 
+	 }
+}
+
+</SCRIPT>
+
+<FORM action=newuser.jsp method=post name=form1 onsubmit="return check();"><BR>
+	<strong></strong> <INPUT type="text" name="username" placeholder="이름" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:#11234b; font-size:1.5em;"><BR><BR>
+	<strong></strong> <INPUT type="text" name="userid" placeholder="아이디" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:#11234b; font-size:1.5em;"><BR><BR>
+	<strong></strong> <INPUT type="text" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:#11234b; font-size:1.5em;"><BR>
+	
+	<BR><INPUT type="submit" value="회원가입" button style="WIDTH: 70pt; HEIGHT: 30pt; color:#7ea9d4; background:#11234b; font-size:1em;">
+	
+</FORM>
+</UL>
+<HR size=1><BR>
+로그인 화면으로 돌아가고 싶으신가요?
+<A href="login.html"><font size="4" color="">[로그인화면]</font></A><BR>
+<font size="1" color=""><BR>@2016341018 parksangwoo jspwork bookdatabase-idpw/books</font>
+
+</BODY>
+</center>
+</HTML>
