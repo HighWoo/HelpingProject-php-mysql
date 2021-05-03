@@ -1,40 +1,54 @@
-<HTML>
-<center>
-<meta charset="UTF-8">
-<BODY style="background-color:white;">
-<font color="Blue"><H1 style="background-color:white;">헬핑 <font color="Black"><BR>[회원가입]</H1>
-<HR size=4>
-<UL type="disc">
-</ul>
-회원가입 창입니다<BR>정보를 입력하고 등록 버튼을 눌러주세요
-<SCRIPT language="javascript">
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Helping</title>
+ <meta name="description" content="ㅁㅁㅁ">
+ <link rel="stylesheet" href="files/sub.css">
+ <link rel="icon" type="image/png" href="files/smalllogo.png">
+ </head>
+<body>
+<div id="home" class="big-bg">
+ <header class="page-header wrapper">
+  <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+  <nav>
+   <ul class="main-nav">
+   <li><a href="Guide.html">소개</a></li>
+   <li><a href="">구인구직</a></li>
+   <li><a href="Vinfor.html">봉사현황</a></li>
+   <li><a href="Service.html">고객센터</a></li>
+   <li><a href="">로그인</a></li>
+
+   </ul>
+   </nav>
+   </header>
+   
+   <div class="home-content wrapper">
+   
+	<p><h1>회원가입</h1><BR><BR>
 
 
-</SCRIPT>
 
-<FORM action=newuser.jsp method=post name=form1 onsubmit="return check();"><BR>
 
-	<strong>아이디</strong>	<div style="text-align:center"> <INPUT type="text" name="userid" placeholder="아이디" style="WIDTH: 108pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;">
-	<INPUT type="buttom" value="중복확인" button style="WIDTH: 58pt; HEIGHT: 20pt; color:#7ea9d4; background:#11234b; font-size:1em;"><BR><BR>
-	<strong>비밀번호</strong> 	<div style="text-align:center"><INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>비밀번호확인</strong>	<div style="text-align:center"><INPUT type="password" name="userpwr" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>이름</strong> 	<div style="text-align:center"><INPUT type="text" name="username" placeholder="이름" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>주소</strong>	<div style="text-align:center"> <INPUT type="text" name="useraddr" placeholder="주소 예)17869 경기도 평택시 서동대로 3825 " style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>주민등록번호</strong>	<div style="text-align:center"> <INPUT type="text" name="ssn" placeholder="주민등록번호 (13자리 -제외)" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>전화번호</strong>	<div style="text-align:center"> <INPUT type="text" name="phonenum" placeholder="전화번호 (-)를 제외하고 입력" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>장애인등록증</strong>	<div style="text-align:center"> <INPUT type="text" name="helpercard" placeholder="장애인등록증 인증" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>범죄기록조회</strong> 	<div style="text-align:center"><INPUT type="text" name="crecord" placeholder="범죄 기록 조회" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
+	<strong>아이디</strong>	<div style="text-align:center"> <INPUT type="text" name="userid" placeholder="아이디" style="WIDTH: 133pt; HEIGHT: 20pt; background:#9ba5a0; font-size:1.0em;">
+	<INPUT type="button" value="확인" button style="WIDTH: 33pt; HEIGHT: 24pt; color:; background:#f1eac3; font-size:0.9em;"><BR>
+	<strong>비밀번호</strong> 	<div style="text-align:center"><INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
+	<strong>비밀번호확인</strong>	<div style="text-align:center"><INPUT type="password" name="userpwr" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
+	<strong>이름</strong> 	<div style="text-align:center"><INPUT type="text" name="username" placeholder="이름" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
+	<strong>주소</strong>	<div style="text-align:center"> <INPUT type="text" name="useraddr" placeholder="주소 예)17869 경기도 평택시 서동대로 3825 " style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
+	<strong>주민등록번호</strong>	<div style="text-align:center"> <INPUT type="password" name="ssn" placeholder="주민등록번호 (13자리 -제외)" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
+	<strong>전화번호</strong>	<div style="text-align:center"> <INPUT type="text" name="phonenum" placeholder="전화번호 (-)를 제외하고 입력" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
 	
 	
-	<BR><INPUT type="submit" value="회원가입" button style="WIDTH: 70pt; HEIGHT: 30pt; color:#7ea9d4; background:#11234b; font-size:1em;">
+	<BR><INPUT type="submit" value="회원가입" button style="WIDTH: 70pt; HEIGHT: 30pt; color:; background:#f1eac3; font-size:1em;">
 	
-</FORM>
-</UL>
-<HR size=1><BR>
-로그인 화면으로 돌아가기
-<A href="Login.html"><font size="4" color="">[로그인화면]</font></A><BR>
-<font size="1" color=""><BR>@capston 8team helping</font>
 
-</BODY>
-</center>
-</HTML>
+</p>
+	
+	</div>
+    </div>
+	
+
+
+   </body>
+  </html>
