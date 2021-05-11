@@ -1,0 +1,9 @@
+create table user(
+id varchar(20) not null,
+pw varchar(20) not null,
+name varchar(5),
+adr varchar(30),
+sid varchar(13),
+phone varchar(11),
+primary key(id))
+default charset=utf8;
