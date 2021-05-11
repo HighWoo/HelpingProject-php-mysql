@@ -1,4 +1,12 @@
 <!doctype html>
+<?php
+function checkid(){
+	$connect = mysqli_connect('localhost','root');
+    mysqli_select_db($connect,'Login');
+	$checkid="select id from user";
+	mysqli_query($connect,$checkid);
+   if($checkid)
+?>
 <html>
 <head>
  <meta charset="UTF-8">
@@ -32,7 +40,7 @@
 
 
 	<strong>아이디</strong>	<div style="text-align:center"> <INPUT type="text" name="userid" placeholder="아이디" style="WIDTH: 133pt; HEIGHT: 20pt; background:#9ba5a0; font-size:1.0em;">
-	<INPUT type="button" value="확인" button style="WIDTH: 33pt; HEIGHT: 24pt; color:; background:#f1eac3; font-size:0.9em;"><BR>
+	<INPUT type="button" value="확인" button style="WIDTH: 33pt; HEIGHT: 24pt; color:; background:#f1eac3; font-size:0.9em; onclick="checkid();""><BR>
 	<strong>비밀번호</strong> 	<div style="text-align:center"><INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
 	<strong>비밀번호확인</strong>	<div style="text-align:center"><INPUT type="password" name="userpwr" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
 	<strong>이름</strong> 	<div style="text-align:center"><INPUT type="text" name="username" placeholder="이름" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.0em;"><BR>
