@@ -6,4 +6,4 @@ adr varchar(30),
 sid varchar(13),
 phone varchar(11),
 primary key(id))
-default charset=utf8;
+ENGINE= InnoDB default charset=utf8;

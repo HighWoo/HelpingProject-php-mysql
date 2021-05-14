@@ -1,37 +1,67 @@
 <!DOCTYPE html>
-<meta charset='utf-8'>
-<html lang="ko">
 <html>
-<head><title> 구인게시판 작성 </title></head>
-<body><br><center> <h2> 구인게시판 작성 </h2><hr>
-<form name=f2 method=post action="Umat.php">
-<table border=0 width=500 height=180 bgcolor=#FFFFCC >
+<head>
+ <meta charset="UTF-8">
+ <title>Helping</title>
+ <meta name="description" content="ㅁㅁㅁ">
+ <style type="text/css">
+ table{
+ margin:auto;
+ }
+ </style>
+ <link rel="stylesheet" href="files/main.css">
+  <link rel="icon" type="image/png" href="files/smalllogo.png">
+ </head>
+ 
+<body>
+<div id="home" class="big-bg">
+ <header class="page-header wrapper">
+  <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+  <nav>
+   <ul class="main-nav">
+   <li><a href="Guide.html">소개</a></li>
+   <li><a href="">구인구직</a></li>
+   <li><a href="Vinfor.html">봉사현황</a></li>
+   <li><a href="Service.html">고객센터</a></li>
+   <li><a href="Login.html">로그인</a></li>
+   </ul>
+   </nav>
+   </header>
+   
+   <div class="home-content wrapper">
+    <h2 class="page-title">구인 게시판 작성</h2>
+	  <form name=f2 method=post action="Umat.php">
+    <table border=0 width=500 height=180 bgcolor=#FFFFCC >
     <tr>
 		<td height=20></td>
-	 </tr>
-	 <tr>
+	  </tr>
+	  <tr>
         <td width=20% height=30 align=right><b> 아이디 : </b></td>
         <td>	&nbsp;<input type="text" size=12 maxlength=10 name='id'></td>
-    </tr>
-    <tr>
+     </tr>
+      <tr>
         <td width=20% height=30 align=right><b> 봉사시간 : </b></td>
         <td>	&nbsp;<input type="text" size=12 maxlength=10 name='time'></td>
-    </tr>
-	 <tr>
+     </tr>
+	  <tr>
         <td height=30 align=right><b> 봉사내용 :   </b></td>
         <td>	&nbsp;<input type="text" size=40 name='work'></td>
-    </tr>
-    <tr>
+     </tr>
+     <tr>
         <td height=30 align=right><b> 장소 :   </b></td>
         <td>	&nbsp;<input type="text" size=40 name='location'></td>
     </tr>
-	<tr>
+	  <tr>
         <td height=40% align=center colspan=2>
             <input type=submit value="  입력하기  ">&nbsp;&nbsp;&nbsp;&nbsp;
             <input type=reset value= "  다시작성  ">
         </td>
     </tr>
-</table>
-</form>
+  </table>
+  </form>
+	</div>
+    </div>
+    
+
 </body>
 </html>

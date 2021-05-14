@@ -1,0 +1,10 @@
+CREATE TABLE Umat ( 
+Number INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+SeekerID VARCHAR(20) NOT NULL , 
+SeekerTime VARCHAR(50) NOT NULL,
+VolunteerWork VARCHAR(50) NOT NULL, 
+ServiceLocation VARCHAR(50) NOT NULL ,
+INDEX(SeekerID),
+FOREIGN KEY(SeekerID) REFERENCES user(id)
+) ENGINE = InnoDB default charset=utf8;
+
