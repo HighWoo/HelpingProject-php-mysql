@@ -20,7 +20,7 @@ $sql.="values('$voru','$id','$pw','$name','$adr','$sid','$phone')";
 mysqli_query($connect,$sql);
 mysqli_close($connect);
 
-print "<script language=javascript> alert('회원가입이 완료되었습니다'); location.replace('Login.html'); </script>";
+print "<script language=javascript> alert('회원가입이 완료되었습니다'); location.replace('Login.php'); </script>";
 }
 
 ?>
