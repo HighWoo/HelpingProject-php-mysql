@@ -15,7 +15,7 @@ else{
 include "connect_db.php";
 
 $sql="insert into user(voru,id,pw,name,adr,sid,phone)";
-$sql.="values('$voru''$id','$pw','$name','$adr','$sid','$phone')";
+$sql.="values('$voru','$id','$pw','$name','$adr','$sid','$phone')";
 
 mysqli_query($connect,$sql);
 mysqli_close($connect);
