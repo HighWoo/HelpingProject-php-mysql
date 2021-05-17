@@ -1,4 +1,5 @@
 create table user(
+voru varchar(5),
 id varchar(20) not null,
 pw varchar(20) not null,
 name varchar(5),

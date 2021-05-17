@@ -1,5 +1,5 @@
 <?php
-
+$voru=$_POST['vaorus'];
 $id =$_POST['userid'];
 $pw=$_POST['userpw'];
 $name=$_POST['username'];
@@ -12,15 +12,10 @@ if($id==null||$pw==null||$name==null||$name==null||$sid==null||$phone==null){
 
 else{
 
-$connect = mysqli_connect('localhost','root');
-mysqli_select_db($connect,'Login');
+include "connect_db.php";
 
-mysqli_query($connect,"set session character_set_connection=utf8;");
-mysqli_query($connect,"set session character_set_result=utf8;");
-mysqli_query($connect,"set session character_set_client=utf8;");
-
-$sql="insert into user(id,pw,name,adr,sid,phone)";
-$sql.="values('$id','$pw','$name','$adr','$sid','$phone')";
+$sql="insert into user(voru,id,pw,name,adr,sid,phone)";
+$sql.="values('$voru''$id','$pw','$name','$adr','$sid','$phone')";
 
 mysqli_query($connect,$sql);
 mysqli_close($connect);
