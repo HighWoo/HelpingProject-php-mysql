@@ -12,3 +12,29 @@
 ### <5차 5/11> 강재은- User.html, Umat.php, Vol.html, Vmat.php 업로드 완료현재 구인게시판 등록할 수 있으며 구직게시판 틀만 잡음
 ### <5차 5/11> 박상우- Signup.php와user.db연동하여 회원등록이 가능하게 제작완료
 ### <5차 5/11> 김찬영-Guide.html(사이트소개) ,Vinfor.html(봉사현황),informch.html(정보수정), Vollookup.html(봉사활동 내역조회), informodlogin.html(내정보 비밀번호 입력), informod.html(내정보) 의 페이지 디자인 통합 및 수정
+---
+### <6차 5/17> 강재은-
+notice.php, umat.php, vmat.php
+회원 정보가 사용자, 봉사자에 따라 구인 및 구직게시판 띄워줌
+umat vmat에 게시글 등록하면 notice.php로 돌아가게 했음
+
+다음주 목표
+1. 구인구직 메뉴 클릭하면 notice.php로 갈수 있도록 변경해야됨
+2. 세션 이용하여 현재 로그인되어있는 아이디 불러와 구인 구직 게시판 만들 수 있게 수정해야됨(다음주 umat.php vmat.php 수정함)
+
+
+### <6차 5/17> 김찬영- 
+Vinfor.php 전체 회원수 출력
+user.sql vincnt 테이블 추가
+a/blogmain,signup 소스코드 수정
+
+다음목표: db 봉사활동 횟수 연동하여 Vinfor 에 출력,  등 미완성 페이지 작성
+
+### <6차 5/17> 박상우- 
+Login.php에서 함수를 제작하여 비밀번호동일여부와 아이디 중복여부를 판단하는 함수제작
+아이디 중복여부를 판단하는 php 제작(logcheck.php)
+Logcheck.php에서 세션을 적용하여 로그인 제작
+Logtest.php에서 로그인된 사용자의 이름과 아이디 출력(test)
+Logout.php에서 세션종료와 함께 로그아웃 실행
+
+다음목표: 페이지 이동 최적화
