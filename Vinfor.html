@@ -1,3 +1,17 @@
+
+<?php
+	include " connect_db.php";	
+	$sql = "select *from user";                      
+	$result = mysqli_query ($connect, $sql);          
+	$count = mysqli_num_fields ($result);             
+	
+
+	$row_count = mysqli_num_rows($result);
+	$usercnt = 1;
+  
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -26,7 +40,14 @@
 	<hr>
 	<div style= "font-size:3em; color:#b07f72; text-align:center;">봉사현황</div>
 	<hr>
-	<div style= "font-size:1.5em; color:#b07f72; text-align:center;"><li>소속지역 : 경기도</li></div>
+
+	<div style= "font-size:1.5em; color:#b07f72; text-align:center;"><li>
+	gdgd
+<?php
+	echo "회원수 :";
+	echo $usercnt;
+?>
+	</li></div>
 	<br><br>
 	
 			<ul>
