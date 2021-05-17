@@ -26,11 +26,19 @@
    <div class="home-content wrapper">
    
 	
+<?php
+
+session_start();
 
 
+
+?>
+<form name="login_form" action="logcheck.php" method="post">
  <INPUT type="text" name="userid" placeholder="아이디" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.2em;"><BR><BR>
  <INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.2em;"><BR><BR><BR>
- <a class="button" href="">로그인</a><BR><BR>
+ <input type="submit" name="login" value="Login">
+</form>
+
 <HR size=4>
 회원가입을 원하세요?
 <A href="Signup.php"><font size="4" color="#b07f72">[회원가입]</font></A><BR><BR>
