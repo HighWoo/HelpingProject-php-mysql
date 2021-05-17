@@ -29,6 +29,7 @@ window.open('id_chk.php?userid='+signup.userid.value,'IDwin', 'width=400, height
 	}
   }
 
+
 </script>
 <form name=signup method=post action="insertuser_db.php">
 <div id="home" class="big-bg">
