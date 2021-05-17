@@ -18,7 +18,7 @@ if($id==$row['id'] && $pw==$row['pw']){
 
    $_SESSION['id']=$row['id'];
    $_SESSION['voru']=$row['voru'];
-   echo "<script>location.href='logtest.php';</script>";
+   echo "<script>location.href='alogmain.html';</script>";
 
 }else{
 

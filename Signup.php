@@ -38,7 +38,7 @@ window.open('id_chk.php?userid='+signup.userid.value,'IDwin', 'width=400, height
    <ul class="main-nav">
    <li><a href="Guide.html">소개</a></li>
    <li><a href="">구인구직</a></li>
-   <li><a href="Vinfor.html">봉사현황</a></li>
+   <li><a href="Vinfor.php">봉사현황</a></li>
    <li><a href="Service.html">고객센터</a></li>
    <li><a href="login.php">로그인</a></li>
 
