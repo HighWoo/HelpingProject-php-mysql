@@ -12,12 +12,7 @@ if($id==null||$pw==null||$name==null||$name==null||$sid==null||$phone==null){
 
 else{
 
-$connect = mysqli_connect('localhost','root');
-mysqli_select_db($connect,'Login');
-
-mysqli_query($connect,"set session character_set_connection=utf8;");
-mysqli_query($connect,"set session character_set_result=utf8;");
-mysqli_query($connect,"set session character_set_client=utf8;");
+include "connect_db.php";
 
 $sql="insert into user(id,pw,name,adr,sid,phone)";
 $sql.="values('$id','$pw','$name','$adr','$sid','$phone')";
