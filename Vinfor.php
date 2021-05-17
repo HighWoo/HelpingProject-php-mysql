@@ -1,14 +1,17 @@
-
 <?php
-	include " connect_db.php";	
+	
+	
+	include "connect_db.php";
+	
+
 	$sql = "select *from user";                      
 	$result = mysqli_query ($connect, $sql);          
 	$count = mysqli_num_fields ($result);             
 	
 
 	$row_count = mysqli_num_rows($result);
-	$usercnt = 1;
-  
+	$usercnt = $row_count;
+	mysqli_close($connect);   
 
 ?>
 
@@ -42,11 +45,12 @@
 	<hr>
 
 	<div style= "font-size:1.5em; color:#b07f72; text-align:center;"><li>
-	gdgd
+	총 회원 수는 
 <?php
-	echo "회원수 :";
-	echo $usercnt;
+		echo "<B> $usercnt  </B>";
 ?>
+	명 입니다.
+
 	</li></div>
 	<br><br>
 	
