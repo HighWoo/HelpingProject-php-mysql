@@ -14,9 +14,9 @@
   <h1><a href="alogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
   <nav>
    <ul class="main-nav">
-   <li><a href="Guide.html">소개</a></li>
-   <li><a href="">구인구직</a></li>
-   <li><a href="Vinfor.html">봉사현황</a></li>
+   <li><a href="aGuide.html">소개</a></li>
+   <li><a href="notice.php">구인구직</a></li>
+   <li><a href="Vinfor.php">봉사현황</a></li>
    <li><a href="Service.html">고객센터</a></li>
    <li><a href="">내정보</a></li>
    <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
@@ -29,7 +29,7 @@
    {
    ?>
    
-   // 현재 로그인 정보가 봉사자일때 띄우는 div
+   
 <div id="board_area1"> 
   <h1>구인게시판</h1>
   <h4>어려움을 겪고 있는 이들이 봉사활동자를 찾고 있는 게시판입니다.</h4>
@@ -61,7 +61,6 @@
         <tr>
           <td width="70"><?php echo $board['Number']; ?></td>
           <td width="500"><?php echo $title;?></a></td>
-          // 회원과 관련된 정보를 제공하는 사이트 만들어야됨
           <td width="120"><a href=""><?php echo $board['SeekerID']?></td>
           <td width="100"><?php echo $board['SeekerTime']?></td>
           <td width="100"><?php echo $board['ServiceLocation']; ?></td>
@@ -80,7 +79,6 @@
   else if($_SESSION['voru']=="사용자"){
     
     ?>
-// 현재 로그인 정보가 사용자일때 띄우는 div
 
 <div id="board_area2"> 
   <h1>구직게시판</h1>
@@ -112,7 +110,6 @@
         <tr>
           <td width="70"><?php echo $board['Number']; ?></td>
           <td width="500"><?php echo $title;?></a></td>
-          // 회원과 관련된 정보를 제공하는 사이트 만들어야됨
           <td width="120"><a href=""><?php echo $board['VseekerID']?></td>
           <td width="100"><?php echo $board['VseekerTime']?></td>
         </tr>

@@ -1,5 +1,6 @@
 <?php
-	$id = $_POST['id'];
+session_start();
+	$id = $_SESSION['id'];
 	$time = $_POST['time'];
 	$work = $_POST['work'];
   if($id==null||$time==null||$work==null){
@@ -21,6 +22,6 @@
 	mysqli_query($connect, $sql) ;        //sql 질의 수행.
 	mysqli_close($connect);                 //db 연결 종료
 	
-print "<script language=javascript> alert('구직 게시판 등록이 완료되었습니다.'); location.replace('notice.html'); </script>";
+print "<script language=javascript> alert('구직 게시판 등록이 완료되었습니다.'); location.replace('alogmain.html'); </script>";
 
 ?>
