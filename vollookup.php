@@ -1,3 +1,16 @@
+<?php
+	
+	
+	include "connect_db.php";
+	
+
+	$sql = "select * from volcontent";                      
+	$result = mysqli_query ($connect, $sql);          
+	$count = mysqli_num_fields($result);
+	mysqli_close($connect);   
+
+?>
+
 <!doctype html>
 
  <head>
@@ -34,12 +47,41 @@
    </header>
 <h1 >[봉사활동 내역조회]<BR>다음은 회원님이 진행하신 봉사활동 내역입니다</h1>
 <HR size=4>
-<UL type="disc">
-</UL>
-봉사날짜<br>
-누구와봉사?<br>
-데이터베이스에서 봉사내역 가져오기<br>
 
+
+	<br>
+		<H3>봉 사 내 역</H3><br>
+<table border="1">
+    
+    <tr>
+        <th>봉사일자</th>
+        <th>봉사분류</th> 
+        <th>봉사활동내역</th> 
+        <th>봉사시간</th>
+		<th>봉사번호</th>
+    </tr>
+  
+    		 
+<?php
+	while($rows=mysqli_fetch_row($result)){
+		
+		echo "<tr>";
+		for ($a =0; $a < $count; $a++)
+		{
+			echo "<td> $rows[$a] </td>";
+		}
+		echo "<tr>";
+	}
+?>
+
+</table>
+
+
+<UL type="disc">
+
+</UL>
+
+        
 
 
 
