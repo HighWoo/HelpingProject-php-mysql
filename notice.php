@@ -9,6 +9,20 @@
  <link rel="icon" type="image/png" href="files/smalllogo.png">
 </head>
 <body>
+<script>
+function membercheck()
+  {
+  var userid = document.getElementById("uid").value;
+	if(userid) {
+	  url="member_check.php?userid="+userid;
+	  window.open(url,'IDwin', 'width=400, height=200,left=750,Top=130');
+		
+	} else {
+	  alert('아이디를 입력해 주세요');
+		userid.focus();
+	}
+  }
+</script>
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
   <h1><a href="alogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
@@ -60,8 +74,8 @@
       <tbody>
         <tr>
           <td width="70"><?php echo $board['Number']; ?></td>
-          <td width="500"><?php echo $title;?></a></td>
-          <td width="120"><a href=""><?php echo $board['SeekerID']?></td>
+          <td width="500"><?php echo $title;?></td>
+          <td width="120"><?php echo $board['SeekerID']?></td>
           <td width="100"><?php echo $board['SeekerTime']?></td>
           <td width="100"><?php echo $board['ServiceLocation']; ?></td>
         </tr>
@@ -71,6 +85,13 @@
     <div id="write_btn">
     
       <a href="Vol.html"><button>구직 게시판에 글쓰기</button></a>
+    </div>
+     <div class="member_ck">
+    <div style="text-align:center"><strong>회원정보 조회하기</strong> 
+    <form method=post action="member_check.php">
+    <INPUT type="text" name="userid" id="uid" placeholder="아이디" style="WIDTH: 133pt; HEIGHT: 20pt; background:#9ba5a0; font-size:1.0em;">
+	  <INPUT type="button" value="확인" onClick="membercheck();" button style="WIDTH: 33pt; HEIGHT: 24pt; color:; background:#f1eac3; font-size:0.9em; "><BR>
+	  </form>
     </div>
   </div>
   
@@ -109,8 +130,8 @@
       <tbody>
         <tr>
           <td width="70"><?php echo $board['Number']; ?></td>
-          <td width="500"><?php echo $title;?></a></td>
-          <td width="120"><a href=""><?php echo $board['VseekerID']?></td>
+          <td width="500"><?php echo $title;?></td>
+          <td width="120"><?php echo $board['VseekerID']?></td>
           <td width="100"><?php echo $board['VseekerTime']?></td>
         </tr>
       </tbody>
@@ -120,6 +141,14 @@
     
       <a href="user.html"><button>구인 게시판에 글쓰기</button></a>
     </div>
+    <div class="member_ck">
+    <div style="text-align:center"><strong>회원정보 조회하기</strong> 
+    <form method=post action="member_check.php">
+    <INPUT type="text" name="userid" id="uid" placeholder="아이디" style="WIDTH: 133pt; HEIGHT: 20pt; background:#9ba5a0; font-size:1.0em;">
+	  <INPUT type="button" value="확인" onClick="membercheck();" button style="WIDTH: 33pt; HEIGHT: 24pt; color:; background:#f1eac3; font-size:0.9em; "><BR>
+	  </form>
+    </div>
+    
   </div>
   
 </body>
