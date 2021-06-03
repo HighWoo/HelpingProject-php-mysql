@@ -8,7 +8,7 @@ session_start();
 	print "<script language=javascript> alert('빈칸이있습니다'); location.replace('User.html'); </script>";
 }
 
-	$connect = mysqli_connect('localhost',  'root', '123456');
+	$connect = mysqli_connect('localhost',  'root');
 	mysqli_select_db($connect, 'Login');
 	
     /*  --------    PHP와 MySQL 한글 깨짐 방지  --------   */
