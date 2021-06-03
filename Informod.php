@@ -21,8 +21,8 @@
    <li><a href="aGuide.html">소개</a></li>
    <li><a href="notice.php">구인구직</a></li>
    <li><a href="Vinfor.pgp">봉사현황</a></li>
-   <li><a href="Service.html">고객센터</a></li>
-    <li><a href="Service.html">내정보</a></li>
+   <li><a href="Service.php">고객센터</a></li>
+    <li><a href="informod.php">내정보</a></li>
   <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
 
    </ul>
@@ -40,8 +40,8 @@
 <HR size=4>
 <UL type="disc">
 </UL>
-<input type="button" onClick="location.href='informodlogin.html'" value="정보 수정하기" button style="WIDTH: 300pt; HEIGHT: 300pt; color:#7ea9d4;  font-size:1.5em;">
-<input type="button" onClick="location.href='vollookup.html'" value="봉사기록 조회하기" button style="WIDTH: 300pt; HEIGHT: 300pt; color:#7ea9d4;  font-size:1.5em;">
+<input type="button" onClick="location.href='informodlogin.php'" value="정보 수정하기" button style="WIDTH: 300pt; HEIGHT: 300pt; color:#7ea9d4;  font-size:1.5em;">
+<input type="button" onClick="location.href='vollookup.php'" value="봉사기록 조회하기" button style="WIDTH: 300pt; HEIGHT: 300pt; color:#7ea9d4;  font-size:1.5em;">
 
 
 

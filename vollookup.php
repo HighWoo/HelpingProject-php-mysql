@@ -1,6 +1,7 @@
 <?php
 	
-	
+	session_start();
+
 	include "connect_db.php";
 	
 
@@ -35,17 +36,25 @@
   <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
   <nav>
    <ul class="main-nav">
-    <li><a href="aGuide.html">소개</a></li>
+
+    <li><a href="aGuide.html">소개  </a></li>
    <li><a href="notice.php">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
    <li><a href="Service.html">고객센터</a></li>
-    <li><a href="Service.html">내정보</a></li>
+    <li><a href="informod.php">내정보</a></li>
   <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
 
    </ul>
    </nav>
    </header>
-<h1 >[봉사활동 내역조회]<BR>다음은 회원님이 진행하신 봉사활동 내역입니다</h1>
+
+<h1 >[봉사활동 내역조회]<BR>
+<?php
+
+   echo "<H1> ";
+   echo $_SESSION['id'];
+   echo "님의 봉사활동 내역입니다.<H1>";
+?>   
 <HR size=4>
 
 
@@ -63,6 +72,8 @@
   
     		 
 <?php
+
+	
 	while($rows=mysqli_fetch_row($result)){
 		
 		echo "<tr>";
