@@ -31,7 +31,6 @@
 session_start();
 
 
-
 ?>
 <form name="login_form" action="logcheck.php" method="post">
  <INPUT type="text" name="userid" placeholder="아이디" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.2em;"><BR><BR>
