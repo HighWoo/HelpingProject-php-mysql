@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "connect_db.php";
 	$id = $_SESSION['id'];
 	$time = $_POST['time'];
 	$work = $_POST['work'];
@@ -8,8 +9,7 @@ session_start();
 	print "<script language=javascript> alert('빈칸이있습니다'); location.replace('User.html'); </script>";
 }
 
-	$connect = mysqli_connect('localhost',  'root');
-	mysqli_select_db($connect, 'Login');
+
 	
     /*  --------    PHP와 MySQL 한글 깨짐 방지  --------   */
 
@@ -20,8 +20,8 @@ session_start();
 	$sql="insert into umat (SeekerID ,SeekerTime ,VolunteerWork ,ServiceLocation) ";
 	$sql.= "values('$id', '$time','$work','$location')";
 
-	mysqli_query($connect, $sql) ;        //sql 질의 수행.
-	mysqli_close($connect);                 //db 연결 종료
+	mysqli_query($connect, $sql) ;        
+	mysqli_close($connect);                
 	
 print "<script language=javascript> alert('구인 게시판 등록이 완료되었습니다.'); location.replace('alogmain.html'); </script>";
 
