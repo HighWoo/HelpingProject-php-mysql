@@ -34,8 +34,8 @@
    <li><a href="login.php">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
    <li><a href="Service.php">고객센터</a></li>
-   <li><a href="informod.php">내정보</a></li>
-   <li><a href="Login.php">로그인</a></li>
+   
+   
 
    </ul>
    </nav>
