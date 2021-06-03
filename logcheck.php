@@ -1,5 +1,6 @@
 <?php
 
+
 session_start(); // 세션
 include ("connect_db.php"); // DB접속
 
@@ -13,8 +14,13 @@ $result = mysqli_query($connect, $query);
 $row = mysqli_fetch_array($result);
 
 
-
-if($id==$row['id'] && $pw==$row['pw']){ 
+if($id==null||$pw==null){
+	echo "<script>window.alert('빈칸이 있습니다');</script>"; 
+	 echo "<script>location.href='Login.php';</script>";
+}
+else{
+	
+ if($id==$row['id'] && $pw==$row['pw']){ 
 
    $_SESSION['id']=$row['id'];
    $_SESSION['voru']=$row['voru'];
@@ -22,9 +28,12 @@ if($id==$row['id'] && $pw==$row['pw']){
 
 }else{
 
-   echo "<script>window.alert('invalid username or password');</script>"; 
+   echo "<script>window.alert('입력한 정보가 바르지 않습니다');</script>"; 
    echo "<script>location.href='Login.php';</script>";
 
 }
+}
+
+
 
 ?>
