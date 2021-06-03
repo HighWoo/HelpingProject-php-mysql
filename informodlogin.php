@@ -25,8 +25,8 @@
     <li><a href="aGuide.html">소개</a></li>
    <li><a href="notice.php">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
-   <li><a href="Service.php">고객센터</a></li>
-    <li><a href="informod.php">내정보</a></li>
+   <li><a href="Service.html">고객센터</a></li>
+    <li><a href="Service.html">내정보</a></li>
   <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
 
    </ul>
@@ -34,10 +34,19 @@
    </header>
 <h1 >[내정보]</h1>
 <HR size=4>
+<?php
+
+session_start();
+
+
+?>
 <UL type="disc">
 </UL>
-<strong> 비밀번호를 입력해 본인인증 을해주세요.</strong> 	<div style="text-align:center"><INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;">
-<INPUT type="button" onclick="location.href='Informch.html'"  value="확인" button style="WIDTH: *; HEIGHT: 24pt; color:#000000;  font-size:1em;"><BR><BR>
+<strong> 비밀번호를 입력해 본인인증 을해주세요.</strong> 
+<form name="login_form2" action="inforlogcheck.php" method="post">
+ <INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.2em;"><BR><BR><BR>
+ <input type="submit" name="login" value="Login">
+</form>
 
 
 
