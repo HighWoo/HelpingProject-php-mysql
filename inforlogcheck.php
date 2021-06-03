@@ -25,7 +25,7 @@ else{
 }else{
 
    echo "<script>window.alert('입력한 정보가 바르지 않습니다');</script>"; 
-   echo "<script>location.href='Login.php';</script>";
+   echo "<script>location.href='informodlogin.php';</script>";
 
 }
 }
