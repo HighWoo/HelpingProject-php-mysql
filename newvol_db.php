@@ -16,7 +16,7 @@ else{
 include ("connect_db.php");
 
 $sql="insert into volcontents(title,volstart,volclass,volcontent,voltime,volnum,id)";
-$sql.="values('$title','$volstart','$volclass','$voltime','$volcontent','$volnum','$id')";
+$sql.="values('$title','$volstart','$volclass','$volcontent','$voltime','$volnum','$id')";
 
 mysqli_query($connect,$sql);
 mysqli_close($connect);
