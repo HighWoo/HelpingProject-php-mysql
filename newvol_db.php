@@ -5,7 +5,6 @@ $volstart=$_POST['volstart'];
 $volclass=$_POST['volclass'];
 $volcontent=$_POST['volcontent'];
 $voltime=$_POST['voltime'];
-$volnum=1;
 $id=$_SESSION['id'];
 if($title==null||$volstart==null||$volclass==null||$voltime==null){
 	print "<script language=javascript> alert('빈칸이있습니다'); location.replace('newvol.php'); </script>";
@@ -14,6 +13,12 @@ if($title==null||$volstart==null||$volclass==null||$voltime==null){
 else{
 
 include ("connect_db.php");
+
+$sqla = "select *from volcontents";                      
+$result = mysqli_query ($connect, $sqla);          
+$count = mysqli_num_fields ($result);             
+$row_count = mysqli_num_rows($result);
+$volnum = $row_count+1;
 
 $sql="insert into volcontents(title,volstart,volclass,volcontent,voltime,volnum,id)";
 $sql.="values('$title','$volstart','$volclass','$volcontent','$voltime','$volnum','$id')";
