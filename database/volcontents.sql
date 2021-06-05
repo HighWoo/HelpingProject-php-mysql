@@ -1,4 +1,4 @@
-create table volcontent(
+create table volcontents(
 voldate varchar(10) not null,
 volclass varchar(10) not null,
 volcontent varchar(30) not null,
