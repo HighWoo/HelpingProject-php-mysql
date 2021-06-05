@@ -8,4 +8,4 @@ sid varchar(13),
 phone varchar(11),
 vincnt int,
 primary key(id))
-ENGINE= InnoDB default charset=utf8;
+default charset=utf8;

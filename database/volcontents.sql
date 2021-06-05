@@ -1,8 +1,10 @@
 create table volcontents(
-voldate varchar(10) not null,
-volclass varchar(10) not null,
-volcontent varchar(30) not null,
-voltime int ,
-volnum int
+title varchar(50) not null,
+volstart varchar(50) not null,
+volclass varchar(50) not null,
+volcontent varchar(50) not null,
+voltime int(11) not null,
+volnum int(11) not null,
+primary key(volnum)
 )
-ENGINE= InnoDB default charset=utf8;
+default charset=utf8;
