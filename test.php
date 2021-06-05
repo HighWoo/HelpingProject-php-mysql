@@ -38,25 +38,18 @@
 		
 	
 
-
+            include ("connect_db.php");
             $currentPage = 1;
             if (isset($_GET["currentPage"])) {
                 $currentPage = $_GET["currentPage"];
             }
  
          
-            $conn = mysqli_connect("localhost", "root");
             
-            if($conn) {
-             
-            } else {
-                die("연결 실패 : " .mysqli_error());
-            }
-            mysqli_select_db($conn,'Login');
             
             $sqlCount = "SELECT count(*) FROM volcontents";
 			
-            $resultCount = mysqli_query($conn,$sqlCount);
+            $resultCount = mysqli_query($connect,$sqlCount);
 		
             if($rowCount = mysqli_fetch_array($resultCount)){
                 $totalRowNum = $rowCount["count(*)"]; 
@@ -65,19 +58,19 @@
             if($resultCount) {
          
             } else {
-                echo "결과 없음: ".mysqli_error($conn);
+                echo "결과 없음: ".mysqli_error($connect);
             }
                         
             $rowPerPage = 5;   
             $begin = ($currentPage -1) * $rowPerPage;
         
             $sql = "SELECT * FROM volcontents order by volnum desc limit ".$begin.",".$rowPerPage."";
-            $result = mysqli_query($conn,$sql);
+            $result = mysqli_query($connect,$sql);
        
             if($result) {
                 echo "조회 성공";
             } else {
-                echo "결과 없음: ".mysqli_error($conn);
+                echo "결과 없음: ".mysqli_error($connect);
             }
         ?>
         <table class="table table-bordered">
@@ -143,7 +136,7 @@
                
                 echo "<a class='btn btn-primary' href='nextpage.php?currentPage=".($currentPage+1)."'>다음</a>";
             }
-            mysqli_close($conn);
+            mysqli_close($connect);
         ?>
         &nbsp;&nbsp;
         <a class="btn btn-primary" href="/board_add_form.php">글 쓰기</a>
