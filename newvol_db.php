@@ -14,11 +14,12 @@ else{
 
 include ("connect_db.php");
 
-$sqla = "select *from volcontents";                      
+
+$sqla = "select max(volnum) from volcontents";                      
 $result = mysqli_query ($connect, $sqla);          
 $count = mysqli_num_fields ($result);             
-$row_count = mysqli_num_rows($result);
-$volnum = $row_count+1;
+$result = $result->fetch_array();
+$volnum = intval($result[0])+1;
 
 $sql="insert into volcontents(title,volstart,volclass,volcontent,voltime,volnum,id)";
 $sql.="values('$title','$volstart','$volclass','$volcontent','$voltime','$volnum','$id')";
