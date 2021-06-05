@@ -20,7 +20,8 @@
    <li><a href="">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
    <li><a href="Service.html">고객센터</a></li>
-   <li><a href="login.php">로그인</a></li>
+   <li><a href="informod.php">내정보</a></li>
+   <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
 
    </ul>
    </nav>
