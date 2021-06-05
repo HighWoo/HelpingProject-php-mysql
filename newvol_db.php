@@ -23,7 +23,6 @@ $volnum = intval($result[0])+1;
 
 $sql="insert into volcontents(title,volstart,volclass,volcontent,voltime,volnum,id)";
 $sql.="values('$title','$volstart','$volclass','$volcontent','$voltime','$volnum','$id')";
-
 mysqli_query($connect,$sql);
 mysqli_close($connect);
 
