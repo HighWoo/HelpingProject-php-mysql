@@ -11,6 +11,7 @@
 
  <meta name="description" content="ㅁㅁㅁ">
  <link rel="stylesheet" href="files/sub.css">
+   <link rel="stylesheet" href="files/matching.css">
  <link rel="icon" type="image/png" href="files/smalllogo.png">
  
  </head>
@@ -19,7 +20,7 @@
 <body>
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
-  <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+  <h1><a href="blogmain.html"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
   <nav>
    <ul class="main-nav">
     <li><a href="aGuide.html">소개</a></li>

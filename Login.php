@@ -5,12 +5,13 @@
  <title>Helping</title>
  <meta name="description" content="ㅁㅁㅁ">
  <link rel="stylesheet" href="files/sub.css">
+  <link rel="stylesheet" href="files/matching.css">
  <link rel="icon" type="image/png" href="files/smalllogo.png">
  </head>
 <body>
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
-  <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+  <h1><a href="blogmain.html"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
   <nav>
    <ul class="main-nav">
    <li><a href="Guide.html">소개</a></li>
@@ -32,10 +33,10 @@ session_start();
 
 
 ?>
-<form name="login_form" action="logcheck.php" method="post">
+<form name="login_form" action="logcheck.php" method="post"><br><br><br>
  <INPUT type="text" name="userid" placeholder="아이디" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.2em;"><BR><BR>
  <INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt;  background:#9ba5a0; font-size:1.2em;"><BR><BR><BR>
- <input type="submit" name="login" value="Login">
+  <input type="submit" name="login" value="Login" class="button"><br><br>
 </form>
 
 <HR size=4>
