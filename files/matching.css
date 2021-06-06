@@ -1,5 +1,9 @@
 @charset "utf-8";
-
+* {
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Malgun gothic','Sans-Serif','Arial';
+}
 
 a {
 	text-decoration: none;
