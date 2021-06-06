@@ -24,9 +24,22 @@ include ("connect_db.php");
 <body>
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
+<<<<<<< HEAD
   <h1><a href="alogmain.php"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
   <nav>
    <ul class="main-nav">
+=======
+<<<<<<< HEAD
+  <h1><a href="alogmain.php"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+  <nav>
+   <ul class="main-nav">
+=======
+  <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+  <nav>
+   <ul class="main-nav">
+
+>>>>>>> 547cfccbd5b92210e3aae9e84ce93e851f27f879
+>>>>>>> e1c69b8bd96987cc38e25ec15d8b60f147c2dbdb
     <li><a href="aGuide.html">소개  </a></li>
    <li><a href="notice.php">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
