@@ -5,6 +5,8 @@ $volstart=$_POST['volstart'];
 $volclass=$_POST['volclass'];
 $volcontent=$_POST['volcontent'];
 $voltime=$_POST['voltime'];
+$voladd=$_POST['voladd'];
+$addcontent=$_POST['addcontent'];
 $id=$_SESSION['id'];
 if($title==null||$volstart==null||$volclass==null||$voltime==null){
 	print "<script language=javascript> alert('빈칸이있습니다'); location.replace('newvol.php'); </script>";
@@ -21,8 +23,8 @@ $count = mysqli_num_fields ($result);
 $result = $result->fetch_array();
 $volnum = intval($result[0])+1;
 
-$sql="insert into volcontents(title,volstart,volclass,volcontent,voltime,volnum,id)";
-$sql.="values('$title','$volstart','$volclass','$volcontent','$voltime','$volnum','$id')";
+$sql="insert into volcontents(title,volstart,volclass,volcontent,voltime,voladd,addcontent,volnum,id)";
+$sql.="values('$title','$volstart','$volclass','$volcontent','$voltime','$voladd','$addcontent','$volnum','$id')";
 mysqli_query($connect,$sql);
 mysqli_close($connect);
 
