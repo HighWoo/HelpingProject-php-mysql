@@ -5,12 +5,13 @@
  <title>Helping</title>
  <meta name="description" content="ㅁㅁㅁ">
  <link rel="stylesheet" href="files/sub.css">
+   <link rel="stylesheet" href="files/matching.css">
  <link rel="icon" type="image/png" href="files/smalllogo.png">
  </head>
 <body>
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
-  <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+  <h1><a href="blogmain.html"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
   <nav>
    <ul class="main-nav">
    <li><a href="Guide.html">소개</a></li>
@@ -23,7 +24,7 @@
    </nav>
    </header>
   
-<div style= "font-size:3em; color:#b07f72; text-align:center;">[정보수정]</div>
+<br><div style= "font-size:3em; color:#b07f72; text-align:center;">[정보수정]</div>
 <hr>
 
 <div style= "font-size:1em; color:#b07f72; text-align:center;">정보수정 창입니다<BR>수정할 정보를 입력하고 등록 버튼을 눌러주세요</div>
