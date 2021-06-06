@@ -1,6 +1,15 @@
 @charset "utf-8";
 
+<<<<<<< HEAD
 
+=======
+/* 전체 옵션 */
+* {
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Malgun gothic','Sans-Serif','Arial';
+}
+>>>>>>> 547cfccbd5b92210e3aae9e84ce93e851f27f879
 a {
 	text-decoration: none;
 	color:#333;

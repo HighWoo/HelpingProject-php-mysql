@@ -25,7 +25,11 @@ include ("connect_db.php");
 <form name=appvol method=post action="app_db.php">
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
+<<<<<<< HEAD
   <h1><a href="alogmain.php"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+=======
+  <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
+>>>>>>> 547cfccbd5b92210e3aae9e84ce93e851f27f879
   <nav>
    <ul class="main-nav">
 
