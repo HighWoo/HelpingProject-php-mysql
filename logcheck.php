@@ -24,6 +24,7 @@ else{
 
    $_SESSION['id']=$row['id'];
    $_SESSION['voru']=$row['voru'];
+ 
    echo "<script>location.href='alogmain.php';</script>";
 
 }else{
