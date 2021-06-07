@@ -44,18 +44,12 @@
 
 <input type="button" onClick="location.href='informodlogin.php'" value="정보 수정" button style="WIDTH: 250pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
 <input type="button" onClick="location.href='vollookup.php'" value="봉사내역 조회" button style="WIDTH: 250pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
-<input type="button" onClick="location.href='volappstatus.php'" value="봉사신청현황" button style="WIDTH: 270pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
+<input type="button" onClick="location.href='userorvol2.php'" value="봉사신청현황" button style="WIDTH: 270pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
 
 
 
 
- <HR size=4><BR>
- 다른아이디로 로그인을 원하시나요?
-<INPUT type="button" onClick="logout()" value="로그아웃" button style="WIDTH: 110pt; HEIGHT: 30pt; color:#7ea9d4; font-size:1em;"><BR><BR>
- </font>
-
-<div style= "text-align:center;">고객문의 000-000-0000<BR><BR></div>
-<font size="1" color=""><BR>@capston 8team helping</font>
+ 
 
  </body>
  
