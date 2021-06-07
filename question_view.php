@@ -5,9 +5,9 @@
  <title>Helping</title>
  <meta name="description" content="ㅁㅁㅁ">
  <link rel="stylesheet" href="files/main.css">
+ <link rel="stylesheet" href="files/reply.css">
   <link rel="icon" type="image/png" href="files/smalllogo.png">
  </head>
- 
 <style>
         table.table2{
                 border-collapse: separate;
@@ -53,7 +53,7 @@
    </header>
    
    <?php
-   include "connect_db.php";
+    include "connect_db.php";
    
     $number = $_GET['number'];
     session_start();
@@ -64,7 +64,7 @@
  
         <table  style="padding-top:50px" align = center width=700 border=0 cellpadding=2 >
                 <tr>
-                <td height=10 align= center bgcolor=#ccc><font color=black>제목 : <?php echo $rows['title']?></font></td>
+                <td height=10 align= center bgcolor=white><font color=black>제목 : <?php echo $rows['title']?></font></td>
                 </tr>
                 <tr>
                 <td bgcolor=white>
@@ -73,11 +73,42 @@
                         <td>내용</td>
                         <td><?php echo $rows['content']?></td>
                         </tr>
-                        </table>
- 
+                </table>
+                
+                <div class="container">
+			<div class="reply_view">
+				<h3 style="padding:10px 0 15px 0; border-bottom: solid 1px gray;">댓글목록</h3>
+				<?php 
+					$query="select * from comment where board_number=$number order by number desc";
+					$result= $connect->query($query);						  
+					while($reply= mysqli_fetch_assoc($result)){					  
+				?>
+				<div class="dat_view">
+					<div><b><?=$reply['id']?></b></div>
+					<div class="dap_to comt_edit"><?php echo nl2br("$reply[content]"); ?></div>
+					<div class="rep_me dap_to"><?=$reply['date']?></div>
+					<div class="rep_me rep_menu">
+						<a class="dat_del_btn" href="reply_delete.php?id=<?php echo $reply['id']?>&content=<?php echo $reply['content']?>">삭제</a>
+					</div>
+				</div>
+			
+				<?php } ?>
+				<form method=post action="reply_ok.php">
+				<div class="dat_ins">
+					<input type="hidden" name="bno" value=<?=$number?>>
+					<input type="hidden" name="dat_user" value=<?=$_SESSION['id']?>>
+					<div style="margin-top:10px;">
+						<textarea name="content" ></textarea>
+						<input type=submit class="rep_btn" value="댓글">
+
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+                
                         <center>
-                        <div class="view_btn">
-                          <button onclick="location.href='./question_reply.php?number=<?=$number?>&id=<?=$_SESSION['id']?>'">답글쓰기</button>
+                        <div class="view_btn">                          
                           <button onclick="location.href='./Service.php'">목록으로</button>
                           <button onclick="location.href='./question_modify.php?number=<?=$number?>&id=<?=$_SESSION['id']?>'">수정</button>
  
