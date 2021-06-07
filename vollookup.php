@@ -5,8 +5,9 @@
 
 	include "connect_db.php";
 	
-
-	$sql = "select * from volcontents";                      
+	$inid= $_SESSION['id'];
+	
+	$sql = "select * from volcontents where id='$inid' ";                      
 	$result = mysqli_query ($connect, $sql);          
 	$count = mysqli_num_fields($result);
 	mysqli_close($connect);   
@@ -37,14 +38,13 @@
   <h1><a href="blogmain.html"><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
   <nav>
    <ul class="main-nav">
-    <li><a href="aGuide.html">소개</a></li>
-
+   
     <li><a href="aGuide.html">소개  </a></li>
    <li><a href="notice.php">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
    <li><a href="Service.html">고객센터</a></li>
     <li><a href="Service.html">내정보</a></li>
-    <li><a href="informod.php">내정보</a></li>
+
   <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
 
    </ul>
