@@ -1,7 +1,4 @@
 <!doctype html>
-<?php
-session_start(); 
-?>
 <html>
 <head>
  <meta charset="UTF-8">
@@ -52,13 +49,7 @@ session_start();
 
 
 
- <HR size=4><BR>
- 다른아이디로 로그인을 원하시나요?
-<INPUT type="button" onClick="logout()" value="로그아웃" button style="WIDTH: 110pt; HEIGHT: 30pt; color:#7ea9d4; font-size:1em;"><BR><BR>
- </font>
-
-<div style= "text-align:center;">고객문의 000-000-0000<BR><BR></div>
-<font size="1" color=""><BR>@capston 8team helping</font>
+ 
 
  </body>
  
