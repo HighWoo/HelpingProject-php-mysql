@@ -11,8 +11,14 @@
 
 	$row_count = mysqli_num_rows($result);
 	$usercnt = $row_count;
+	
+	$sql= "select * from volcontents";
+	$result = mysqli_query ($connect, $sql); 
+	$row_count = mysqli_num_rows($result);
+	$volcnt=$row_count;
+	
 	mysqli_close($connect);   
-
+  
 ?>
 
 <!doctype html>
@@ -32,9 +38,11 @@
   <nav>
    <ul class="main-nav">
    <li><a href="Guide.html">소개</a></li>
-   <li><a href="login.php">구인구직</a></li>
+   <li><a href="voloruser.php">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
    <li><a href="Service.php">고객센터</a></li>
+      <li><a href="informod.php">내정보</a></li>
+   <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
    
    
 
@@ -59,7 +67,9 @@
 			<ul>
 				<li>
 					<div>
-						<a href="site1">전체 봉사활동 건수 0<span>건</span></a>
+						<a href="site1">전체 봉사활동 건수 
+						<?php echo "$volcnt"; ?>
+						<span>건</span></a>
 					</div> 
 				</li>
 				<li>
