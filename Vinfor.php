@@ -86,7 +86,7 @@
 			<ul>
 				<li>
 					<div style="text-align:center;">
-						전체 봉사활동 건수 
+						전체 봉사활동 건수
 						<?php echo "$volcnt"; ?>
 						<span>건</span>
 					</div> 
