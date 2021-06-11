@@ -97,6 +97,7 @@
 				<div class="dat_ins">
 					<input type="hidden" name="bno" value=<?=$number?>>
 					<input type="hidden" name="dat_user" value=<?=$_SESSION['id']?>>
+					<input type="hidden" name="question_user" value=<?=$rows['id']?>>
 					<div style="margin-top:10px;">
 						<textarea name="content" ></textarea>
 						<input type=submit class="rep_btn" value="댓글">

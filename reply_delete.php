@@ -14,17 +14,17 @@ include "connect_db.php";
 session_start(); 
 $id=$_GET['id'];
 $content = $_GET['content'];
-$query = "select id, date from comment where content='$content'";
+$query = "select id from comment where content='$content' AND id='$_SESSION[id]'";
 $result = $connect->query($query);
 
 $comment = mysqli_fetch_assoc($result);
 $usrid = $comment['id'];
 
 $URL = "./Service.php";
- 
+
                 if(!isset($_SESSION['id'])) {
         ?>              <script>
-                                alert("권한이 없습니다.");
+                                alert("권한이 없습니다.1");
                                 location.replace("<?php echo $URL?>");
                         </script>
         <?php   }
@@ -46,7 +46,7 @@ $URL = "./Service.php";
         <?php   }
                 else {
         ?>              <script>
-                                alert("권한이 없습니다.");
+                                alert("권한이 없습니다.2");
                                 location.replace("<?php echo $URL?>");
                         </script>
         <?php   }
