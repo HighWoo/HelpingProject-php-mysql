@@ -73,7 +73,7 @@ include ("connect_db.php");
 		          $result2 = mysqli_query($connect, $sql2);
 		          $count = mysqli_num_rows($result2);
            ?>
-		  <td width="500"><a <?php if($count==0){echo "href=\"volunteers.php?volnum=";echo $board["volnum"]; echo"\"";}else{echo "href=\"matchingend.php?volnum=";echo $board["volnum"]; echo"\"";}?>><?php echo $board['title'];?></a></td>
+		  <td width="500"><a <?php if($count==0){echo "href=\"volunteers.php?volnum=";echo $board["volnum"]; echo"\"";}else{echo "href=\"matchingend_user.php?volnum=";echo $board["volnum"]; echo"\"";}?>><?php echo $board['title'];?></a></td>
 		  
 				
 		
