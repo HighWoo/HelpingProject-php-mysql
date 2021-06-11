@@ -59,12 +59,9 @@
    </ul>
    </nav>
    </header>
-<font size="4" color="#b07f72">
-	<hr>
-	<div style= "font-size:3em; color:#b07f72; text-align:center;">봉사현황</div>
-	<hr>
-
-	<div style= "font-size:1.5em; color:#b07f72; text-align:center;"><li>
+<font size="4" >
+	<div style= "font-size:3em; text-align:center;">봉사현황</div>
+	<div style= "font-size:1.5em; text-align:center;"><li>
 	총 회원 수는 
 <?php
 		echo "<B> $usercnt  </B>";
@@ -73,7 +70,7 @@
 
 	</li></div>
 	<br>
-		<div style= "font-size:1.5em; color:#b07f72; text-align:center;"><li>
+		<div style= "font-size:1.5em; text-align:center;"><li>
 	총 사용자 수는 
 <?php
 		echo "<B> $auser  </B>";
@@ -97,28 +94,7 @@
 			  
 				
 			</ul>
-    <table class="list-table">
-      <thead>
-          <tr>
-                <th width="500">봉사활동 내용</th>
-            </tr>
-        </thead>
-        <?php
-		  $sql = "select * from volcontents order by volnum asc"; 
-		  $result = mysqli_query($connect, $sql);
-		
-            while($board = mysqli_fetch_array($result))
-            {
     
-        ?>
-      <tbody>
-        <tr>
-		      <td width="500"><?php echo $board['title'];?></td>
-
-        </tr>
-      </tbody>
-      <?php   } ?>
-    </table>
 		<br>
 	
 
