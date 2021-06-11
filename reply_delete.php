@@ -14,11 +14,9 @@ include "connect_db.php";
 session_start(); 
 $id=$_GET['id'];
 $content = $_GET['content'];
-$query = "select id, date from comment where content=$content";
+$query = "select id, date from comment where content='$content'";
 $result = $connect->query($query);
-if($result){
-  echo "여기서부터";
-  }
+
 $comment = mysqli_fetch_assoc($result);
 $usrid = $comment['id'];
 
@@ -31,7 +29,7 @@ $URL = "./Service.php";
                         </script>
         <?php   }
                 else if($_SESSION['id']==$usrid) {
-                $query = "delete from comment where content=$content";
+                $query = "delete from comment where content='$content'";
                 $result = $connect->query($query);
                 if($result) {
 ?>
