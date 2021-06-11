@@ -46,7 +46,7 @@
 	
 	
 	
-	<BR><INPUT type="submit" value="수정완료" button style="WIDTH: 70pt; HEIGHT: 30pt; color:#000000;  font-size:1em;">
+	<BR><INPUT class="button" type="submit" value="수정완료" >
 	
 </FORM>
 </UL>

@@ -4,9 +4,8 @@
     $userpwr=$_POST['userpwr'];
     $useraddr=$_POST['useraddr'];
     $phonenum=$_POST['phonenum'];
-    
     include ("connect_db.php");
-    if(!isset($userpw)||!isset($userpwr)||!isset($useraddr)||!isset($phonenum)){
+    if(empty($userpw)||empty($userpwr)||empty($useraddr)||empty($phonenum)){
          echo "<script>window.alert('빈칸이 있습니다.');</script>"; 
          echo "<script>location.href='Informch.php';</script>";
       }
@@ -19,5 +18,5 @@
       $result = mysqli_query($connect, $query);
       echo "<script>window.alert('정보 수정을 완료했습니다.');</script>"; 
       echo "<script>location.href='alogmain.html';</script>";
-      }
+     }
 ?>
