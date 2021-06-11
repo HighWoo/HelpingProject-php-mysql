@@ -46,9 +46,9 @@ include ("connect_db.php");
           <tr>
                 <th width="70">번호</th>
                 <th width="500">제목</th>
-                <th width="120">시간</th>
-                <th width="100">모집인원</th>
-				<th width="70">아이디</th>
+                <th width="120">날짜</th>
+                <th width="100">봉사시간</th>
+				<th width="70">구인자</th>
             </tr>
         </thead>
         <?php

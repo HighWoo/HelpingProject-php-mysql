@@ -22,6 +22,7 @@ include ("connect_db.php");
     </head>
 	 <center>
 <body>
+
 <form name=appvol method=post action="app_db.php">
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
@@ -122,10 +123,58 @@ include ("connect_db.php");
           
 
         </tr>
+		
       </tbody>
+
 	    </table>
 		 <br><br><br><center>
+		<?php
+		$inid= $_SESSION['id'];
+        $sqlb = "select volnum from volapp where id='$inid' "; 
+		$result = mysqli_query($connect, $sqlb);
+		$count = mysqli_num_fields($result);
+	
+		while($rows=mysqli_fetch_row($result)){
+	    $pvolnum1 =array();
+		
+		for ($a =0; $a < $count; $a++)
+		{	
+			if ($nums == $rows[$a]){
+				$pvolnum[$a] = $rows[$a];
+				if ($nums ==$pvolnum[$a] ) 
+				{ 
+					echo "<script>alert(\"이미 지원하신 봉사입니다.\");location.replace('allvol.php');</script>";
+					break;
+				} 
+			}
+			else{
+				$pvolnum2 =$board['volnum'];
+				$pvolnum[$a] = $rows[$a];
+			}
+			
+		}
+
+	    }
+		
+		if ($nums ==$pvolnum[0] ) 
+		{ 
+		echo "<script>alert(\"이미 지원하신 봉사입니다.\");location.replace('allvol.php');</script>";
+	
+	
+		} 
+		else {
+
+		?>
+
 		 <input type="submit" name="app" value="지원하기" class="button" >
+
+		<?php 
+		}
+			
+		?>
+
+		
+
 		 </center>
 		 </form>
   </div>
