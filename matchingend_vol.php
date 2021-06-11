@@ -22,7 +22,7 @@ include ("connect_db.php");
     </head>
 	 <center>
 <body>
-<form name=appvol method=post action="app_db.php">
+<form name=appvol method=post action="fincheck.php">
 <div id="home" class="big-bg">
  <header class="page-header wrapper">
   <h1><a href="alogmain.php"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
@@ -43,12 +43,12 @@ include ("connect_db.php");
        <div id="board_area"> 
    <?php
 		  $nums=$_GET['volnum'];
-          $sql = "select * from volcontents where volnum=".$nums.""; 
+          $sql = "select * from volcontents where volnum='$nums'"; 
 		  $result = mysqli_query($connect, $sql);
-		  $board = mysqli_fetch_array($result)
+		  $board = mysqli_fetch_array($result);
         ?>
-  <br><br><br><h1>조회결과</h1>
-  <h4>지원하신 봉사활동의 상세정보 입니다</h4>
+  <br><h1>지원한 봉사활동</h1>
+  <h4>지원하신 봉사활동의 상세정보 입니다 정보를 확인하신 후 확인버튼을 꼭 눌러주세요</h4>
     <table class="list-table">
       <thead>
           <tr>
@@ -62,7 +62,7 @@ include ("connect_db.php");
         </thead>
 		<tbody>
         <tr>
-          <td> <Input type="hidden" name="volnum" value="<?php echo $board['volnum']; ?>" style="width=70;"><?php echo $board['volnum']; ?></td>
+          <td> <Input type="hidden" name="volnuma" value="<?php echo $board['volnum']; ?>" style="width=70;"><?php echo $board['volnum']; ?></td>
           <td width="500"><?php echo $board['title']?></a></td>
 		  <td width="100"><?php echo $board['volstart']; ?></td>
 		  <td width="100"><?php echo $board['id']; ?></td>
@@ -125,30 +125,59 @@ include ("connect_db.php");
         </tr>
       </tbody>
 	    </table>
-		
-		 
+		 <br><center><h1>봉사받을분 정보</h1></center>
 	<table class="list-table">
+	
      <thead>
+	    
 		<tr>
-			    <th width="1000">구인자 정보</th>
+			    <th width="200">아이디</th>
+				<th width="200">이름</th>
+				<th width="200">나이</th>
+				<th width="200">성별</th>
+				<th width="200">전화번호</th>
 				
 			</tr>
 			 </thead>
-     
+			  
+		
+      <?php 
+	      $uid=$board['id'];
+	      $usql="select * from user where id='$uid'";
+		  $uresult = mysqli_query($connect,$usql);
+		  $uboard = mysqli_fetch_array($uresult);
+		  
+				?>
       <tbody>
         <tr>
-          <td width="500">
-        
-		  </td>
+          
+           <td width="200"><?php echo $uboard['id']?></td>
+		   <td width="200"><?php echo $uboard['name']?></td>
+		   <td width="200"><?php echo $uboard['age']?></td>
+		   <td width="200"><?php echo $uboard['sex']?></td>
+		   <td width="200"><?php echo $uboard['phone']?></td>
           
 
         </tr>
+		
       </tbody>
+		  
+	 
        </table>
-	   <br><br>
-	   <a class="button" href="volend.php">봉사완료</a>
-		 </form>
+		
+		 
+
+	   <br>
+	   <?php
+	      $usql1="select volapp.id from volapp,volcontents where volapp.volnum='$nums' and volapp.volnum=volcontents.volnum and volcontents.checka=1";
+		  $uresult1 = mysqli_query($connect,$usql1);
+		  $uboard1 = mysqli_num_rows($uresult1);
+	
+	   if($uboard1==0){ //완전확인된 값이 없으면 버튼을 표기
+	   echo "<input type=\"submit\" value=\"확인\" class=\"button\" href=\"fincheck.php\">";
+	   }
+		 ?>
   </div>
-       
+       </form>
     </body>
 </html>
