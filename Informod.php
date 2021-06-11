@@ -44,7 +44,7 @@
 
 <input type="button" onClick="location.href='informodlogin.php'" value="정보 수정" button style="WIDTH: 250pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
 <input type="button" onClick="location.href='vollookup.php'" value="봉사내역 조회" button style="WIDTH: 250pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
-<input type="button" onClick="location.href='volappstatus.php'" value="봉사진행현황" button style="WIDTH: 270pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
+<input type="button" onClick="location.href='myappvol.php'" value="봉사진행현황" button style="WIDTH: 270pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
 
 
 
