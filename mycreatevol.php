@@ -45,11 +45,12 @@ include ("connect_db.php");
     <table class="list-table">
       <thead>
           <tr>
-                <th width="70">봉사번호</th>
+                <th width="70">번호</th>
                 <th width="500">제목</th>
 				<th width="120">시작일자</th>
                 <th width="120">봉사시간</th>
 				<th width="60">생성자</th>
+				<th width="60">상태</th>
             </tr>
         </thead>
         <?php
@@ -57,6 +58,7 @@ include ("connect_db.php");
 		  $sql = "select volnum,title,volstart,voltime,id from volcontents where id='$sid' order by volnum asc"; 
 		  $result = mysqli_query($connect, $sql);
 		  
+		
             while($board = mysqli_fetch_array($result))
             {
     
@@ -65,10 +67,20 @@ include ("connect_db.php");
         <tr>
 		  
           <td width="70" name="num"><?php echo $board['volnum']; ?></td>
-		  <td width="500"><a href="volunteers.php?volnum=<?php echo $board["volnum"];?>"><?php echo $board['title'];?></a></td>
+		  <?php  
+		          $volnuma=$board['volnum'];
+		          $sql2= "select cho from volapp where volnum=$volnuma and cho=1";
+		          $result2 = mysqli_query($connect, $sql2);
+		          $count = mysqli_num_rows($result2);
+           ?>
+		  <td width="500"><a <?php if($count==0){echo "href=\"volunteers.php?volnum=";echo $board["volnum"]; echo"\"";}else{echo "href=\"matchingend.php?volnum=";echo $board["volnum"]; echo"\"";}?>><?php echo $board['title'];?></a></td>
+		  
+				
+		
           <td width="120" name="address"><?php echo $board['volstart']; ?></td>
 	      <td width="120" name="address"><?php echo $board['voltime']; ?></td>
 		  <td width="60" name="address"><?php echo $board['id']; ?></td>
+		  <td width="60" name="address"><?php if($count==0){echo "대기중";} else{echo "완료";} ?></td>
         </tr>
       </tbody>
       <?php 
