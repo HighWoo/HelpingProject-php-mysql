@@ -17,7 +17,17 @@
 	$row_count = mysqli_num_rows($result);
 	$volcnt=$row_count;
 	
-	mysqli_close($connect);   
+	$sql= "select * from user where voru='사용자'";
+	$result = mysqli_query ($connect, $sql); 
+	$row_count = mysqli_num_rows($result);
+	$auser=$row_count;
+	
+	$sql= "select * from user where voru='봉사자'";
+	$result = mysqli_query ($connect, $sql); 
+	$row_count = mysqli_num_rows($result);
+	$buser=$row_count;
+	
+	 
   
 ?>
 
@@ -62,25 +72,53 @@
 	명 입니다.
 
 	</li></div>
-	<br><br>
+	<br>
+		<div style= "font-size:1.5em; color:#b07f72; text-align:center;"><li>
+	총 사용자 수는 
+<?php
+		echo "<B> $auser  </B>";
+?>
+	명 이고 총 봉사자 수는 
+<?php
+		echo "<B> $buser  </B>";
+?>
+ 입니다.
+	</li></div>
+	<br>
 	
 			<ul>
 				<li>
-					<div>
-						<a href="site1">전체 봉사활동 건수 
+					<div style="text-align:center;">
+						전체 봉사활동 건수 
 						<?php echo "$volcnt"; ?>
-						<span>건</span></a>
+						<span>건</span>
 					</div> 
 				</li>
-				<li>
-					<div>
-						<a href="site2">오늘 봉사활동 건수 0<span>건</span></a>
-					</div> 
-				</li>
-			
+			  
 				
 			</ul>
-	
+    <table class="list-table">
+      <thead>
+          <tr>
+                <th width="500">봉사활동 내용</th>
+            </tr>
+        </thead>
+        <?php
+		  $sql = "select * from volcontents order by volnum asc"; 
+		  $result = mysqli_query($connect, $sql);
+		
+            while($board = mysqli_fetch_array($result))
+            {
+    
+        ?>
+      <tbody>
+        <tr>
+		      <td width="500"><?php echo $board['title'];?></td>
+
+        </tr>
+      </tbody>
+      <?php   } ?>
+    </table>
 		<br>
 	
 
@@ -93,4 +131,5 @@
 </html>	
 <br><br><br><br><br><br><br><br><br>
 <hr>
+             
              
