@@ -49,7 +49,7 @@
    </ul>
    </nav>
    </header>
-  <H1> 고객센터 페이지 </H1>
+  <H1 align=center> 고객센터 페이지 </H1>
   <?php
   include ("connect_db.php");
   $query ="select * from question order by number desc";
