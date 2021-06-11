@@ -82,9 +82,12 @@ include ("connect_db.php");
 			    <th width="200">아이디</th>
 				<th width="200">이름</th>
 				<th width="200">전화번호</th>
+				<th width="100">선택하기</th>
 				
 			</tr>
 			 </thead>
+			  </form>
+			 <form name=accept_form method=post action="choval.php">
       <?php 
 	      $usql="select user.id,user.name,user.phone from user,volapp where volapp.volnum='$nums' and user.id=volapp.id order by volnum asc";
 		  $uresult = mysqli_query($connect, $usql);
@@ -97,15 +100,20 @@ include ("connect_db.php");
            <td width="200"><?php echo $uboard['id']?></td>
 		   <td width="200"><?php echo $uboard['name']?></td>
 		   <td width="200"><?php echo $uboard['phone']?></td>
+		   <td> <Input type="radio" name="choice" value="<?php echo $uboard["id"];?>" style="width=70, height=100;"></td>
           
 
         </tr>
+		
       </tbody>
 	  <?php } ?>
+	 
        </table>
+      <Input type="hidden" name="cnum" value="<?php echo $board['volnum']; ?>" style="width=70;">
+	  <br><br><input type="submit" name="accept" value="수락하기" class="button"><br><br>
+        </form>
 
-
-		 </form>
+		
   </div>
 
        
