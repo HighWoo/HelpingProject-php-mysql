@@ -15,10 +15,12 @@
   <nav>
    <ul class="main-nav">
    <li><a href="Guide.html">소개</a></li>
-   <li><a href="notice.php">구인구직</a></li>
+   <li><a href="voloruser.php">구인구직</a></li>
    <li><a href="Vinfor.php">봉사현황</a></li>
-   <li><a href="Service.html">고객센터</a></li>
-   <li><a href="">로그인</a></li>
+   <li><a href="Service.php">고객센터</a></li>
+   <li><a href="informod.php">내정보</a></li>
+   <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
+
 
    </ul>
    </nav>
@@ -33,7 +35,7 @@
 
 </SCRIPT>
 
-<FORM action=newuser.jsp method=post name=form1 onsubmit="return check();"><BR>
+<FORM action=user_modify.php method=post name=form1 onsubmit="return check();"><BR>
 
 	
 	
