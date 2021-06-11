@@ -14,8 +14,7 @@ if($id==null){
 	echo "<script>window.alert('수락할 봉사자를 선택하셔야 합니다'); history.back(-1)</script>";
 }
 else{
-echo $id; 
-echo $volnum; 
 echo "<script>alert(\"완료되었습니다\");</script>";
+echo "<script>location.href='matchingend_user.php?volnum=$volnum';</script>";
 }
 ?>
