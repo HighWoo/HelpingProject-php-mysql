@@ -1,6 +1,6 @@
 <?php
 
-session_start(); 
+
 include ("connect_db.php"); 
 
 ?>
@@ -39,8 +39,21 @@ include ("connect_db.php");
    </ul>
    </nav>
    </header>
+          <br>
+  <?php
+session_start(); 
+echo "<p align='right' style='font-size:20px' >";
+echo "  -----[      ";
+echo  $_SESSION['voru'];
+
+echo "    ";
+echo  $_SESSION['name'];
+echo  " 님 환영합니다 ]-----";
+	
+echo "</p>";
+?>
  <div id="board_area"> 
-  <center><br><br><br><h1><?php echo $_SESSION['id']; ?> 님이 생성하신 봉사활동 입니다</h1>
+  <center><br><br><br><h1><?php echo $_SESSION['name']; ?> 님이 생성하신 봉사활동 입니다</h1>
   <h4>원하는 봉사활동의 제목을 클릭하여 지원자 정보를 확인하세요</h4></center>
     <table class="list-table">
       <thead>
@@ -73,7 +86,7 @@ include ("connect_db.php");
 		          $result2 = mysqli_query($connect, $sql2);
 		          $count = mysqli_num_rows($result2);
            ?>
-		  <td width="500"><a <?php if($count==0){echo "href=\"volunteers.php?volnum=";echo $board["volnum"]; echo"\"";}else{echo "href=\"matchingend.php?volnum=";echo $board["volnum"]; echo"\"";}?>><?php echo $board['title'];?></a></td>
+		  <td width="500"><a <?php if($count==0){echo "href=\"volunteers.php?volnum=";echo $board["volnum"]; echo"\"";}else{echo "href=\"matchingend_user.php?volnum=";echo $board["volnum"]; echo"\"";}?>><?php echo $board['title'];?></a></td>
 		  
 				
 		

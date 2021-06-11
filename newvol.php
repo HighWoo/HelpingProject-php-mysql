@@ -27,12 +27,17 @@
    </ul>
    </nav>
    </header>
+       <br>
   <?php
 session_start(); 
-echo "<p align='right' style='font-size:20px'>";
-echo "[ ";
-echo  $_SESSION['id'];
-echo  " ]님 환영합니다";
+echo "<p align='right' style='font-size:20px' >";
+echo "  -----[      ";
+echo  $_SESSION['voru'];
+
+echo "    ";
+echo  $_SESSION['name'];
+echo  " 님 환영합니다 ]-----";
+	
 echo "</p>";
 ?>
    

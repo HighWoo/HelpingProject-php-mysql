@@ -29,33 +29,45 @@
    </ul>
    </nav>
    </header>
+          <br>
+  <?php
+session_start(); 
+echo "<p align='right' style='font-size:20px' >";
+echo "  -----[      ";
+echo  $_SESSION['voru'];
+
+echo "    ";
+echo  $_SESSION['name'];
+echo  " 님 환영합니다 ]-----";
+	
+echo "</p>";
+?>
    
    <div class="home-content wrapper">
    
 
  
 
- <center>
+<center>
 <body>
-<h1 >내정보<BR>
-<HR size=4>
+<h1>내정보</h1><BR>
+<h3>원하는 항목을 클릭하세요</h3><BR><BR>	
+
 <UL type="disc">
 </UL>
 
-<input type="button" onClick="location.href='informodlogin.php'" value="정보 수정" button style="WIDTH: 250pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
-<input type="button" onClick="location.href='vollookup.php'" value="봉사내역 조회" button style="WIDTH: 250pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
-<input type="button" onClick="location.href='userorvol2.php'" value="봉사진행현황" button style="WIDTH: 270pt; HEIGHT: 250pt; color:#7ea9d4;  font-size:1.5em;">
+<input class="button" type="button" onClick="location.href='informodlogin.php'" value="정보 수정" button style="WIDTH: 250pt; HEIGHT: 100pt; color:white;  font-size:2.0em; text-align:center;">
+<input class="button" type="button" onClick="location.href='vollookup.php'" value="봉사내역조회" button style="WIDTH: 250pt; HEIGHT: 100pt; color:white;  font-size:2.0em; text-align:center;">
+<input  class="button" type="button" onClick="location.href='userorvol2.php'" value="봉사진행현황" button style="WIDTH: 250pt; HEIGHT: 100pt; color:white;  font-size:2.0em; text-align:center;">
 
 
 
 
- <HR size=4><BR>
- 다른아이디로 로그인을 원하시나요?
-<INPUT type="button" onClick="logout()" value="로그아웃" button style="WIDTH: 110pt; HEIGHT: 30pt; color:#7ea9d4; font-size:1em;"><BR><BR>
+
+
  </font>
 
-<div style= "text-align:center;">고객문의 000-000-0000<BR><BR></div>
-<font size="1" color=""><BR>@capston 8team helping</font>
+
 
  </body>
  
