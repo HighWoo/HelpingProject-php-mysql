@@ -21,7 +21,8 @@ if($id==null||$pw==null){
 else{
 	
  if($id==$row['id'] && $pw==$row['pw']){ 
-
+ 
+   $_SESSION['name']=$row['name'];
    $_SESSION['id']=$row['id'];
    $_SESSION['voru']=$row['voru'];
  
