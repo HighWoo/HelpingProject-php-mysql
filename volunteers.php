@@ -81,7 +81,8 @@ include ("connect_db.php");
 		<tr>
 			    <th width="200">아이디</th>
 				<th width="200">이름</th>
-				<th width="200">전화번호</th>
+				<th width="200">성별</th>
+				<th width="200">나이</th>
 				<th width="100">선택하기</th>
 				
 			</tr>
@@ -89,7 +90,7 @@ include ("connect_db.php");
 			  </form>
 			 <form name=accept_form method=post action="choval.php">
       <?php 
-	      $usql="select user.id,user.name,user.phone from user,volapp where volapp.volnum='$nums' and user.id=volapp.id order by volnum asc";
+	      $usql="select user.id,user.name,user.phone,user.sex,user.age from user,volapp where volapp.volnum='$nums' and user.id=volapp.id order by volnum asc";
 		  $uresult = mysqli_query($connect, $usql);
 		   while($uboard = mysqli_fetch_array($uresult))
             {
@@ -99,7 +100,8 @@ include ("connect_db.php");
           
            <td width="200"><?php echo $uboard['id']?></td>
 		   <td width="200"><?php echo $uboard['name']?></td>
-		   <td width="200"><?php echo $uboard['phone']?></td>
+		   <td width="200"><?php echo $uboard['sex']?></td>
+		   <td width="200"><?php echo $uboard['age']?></td>
 		   <td> <Input type="radio" name="choice" value="<?php echo $uboard["id"];?>" style="width=70, height=100;"></td>
           
 

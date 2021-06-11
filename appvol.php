@@ -151,12 +151,12 @@ include ("connect_db.php");
 				$pvolnum2 =$board['volnum'];
 				$pvolnum[$a] = $rows[$a];
 			}
-			
+		
 		}
 
 	    }
-		
-		if ($nums ==$pvolnum[0] ) 
+		$tnum=0;
+		if ($nums ==$tnum ) 
 		{ 
 		echo "<script>alert(\"이미 지원하신 봉사입니다.\");location.replace('allvol.php');</script>";
 	
