@@ -44,7 +44,6 @@ echo "</p>";
 </UL>
 
 <input class="button" type="button" onClick="location.href='informodlogin.php'" value="정보 수정" button style="WIDTH: 250pt; HEIGHT: 100pt; color:white;  font-size:2.0em; text-align:center;">
-<input class="button" type="button" onClick="location.href='vollookup.php'" value="봉사내역조회" button style="WIDTH: 250pt; HEIGHT: 100pt; color:white;  font-size:2.0em; text-align:center;">
 <input  class="button" type="button" onClick="location.href='userorvol2.php'" value="봉사진행현황" button style="WIDTH: 250pt; HEIGHT: 100pt; color:white;  font-size:2.0em; text-align:center;">
 
 
