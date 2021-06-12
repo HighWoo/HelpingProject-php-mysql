@@ -1,11 +1,11 @@
-create table user(
-voru varchar(5),
-id varchar(20) not null,
-pw varchar(20) not null,
-name varchar(5),
-adr varchar(30),
-sid varchar(13),
-phone varchar(11),
-vincnt int,
-primary key(id))
-default charset=utf8;
+CREATE TABLE `user` (
+  `voru` varchar(5) DEFAULT NULL,
+  `id` varchar(20) NOT NULL,
+  `pw` varchar(20) NOT NULL,
+  `name` varchar(5) DEFAULT NULL,
+  `adr` varchar(30) DEFAULT NULL,
+  `sid` varchar(13) DEFAULT NULL,
+  `phone` varchar(11) DEFAULT NULL,
+  `age` int(11) NOT NULL,
+  `sex` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

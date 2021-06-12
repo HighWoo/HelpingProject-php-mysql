@@ -1,4 +1,5 @@
-create table volapp(
-id varchar(20) not null,
-volnum int(11) not null)
-default charset=utf8;
+CREATE TABLE `volapp` (
+  `id` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `volnum` int(11) NOT NULL,
+  `cho` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
