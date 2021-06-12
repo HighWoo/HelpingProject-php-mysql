@@ -24,7 +24,6 @@
 <HR size=4>
 회원가입을 원하세요?
 <A href="Signup.php"><font size="4" color="#b07f72">[회원가입]</font></A><BR><BR>
-비밀번호를 잊으셨을때는 관리자에게 연락하세요<br>
 Helping본사 000-000-0000<BR><BR>
 <font size="1" color=""></font>
 </p>
