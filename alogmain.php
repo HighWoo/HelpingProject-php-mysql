@@ -40,8 +40,9 @@ echo "</p>";
     <h2 class="page-title">We Help The People.</h2>
 	<p> 작은 봉사로 행복을 느끼세요. 우리는 언제나 어디서나 봉사할수 있도록 당신을 돕습니다.</p>
 	<a class="button" href="voloruser.php">봉사시작하기</a>
+	<?php if($id){?>
 	<a class="button" href="userorvol2.php">매칭정보확인</a>
-    
+  <?php } ?>
 	</div>
     </div>
    </body>
