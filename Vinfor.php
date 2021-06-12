@@ -44,51 +44,44 @@
 <body>
 <div id="home" class="big-bg">
  <?php include "header.php" ?>
-<font size="4" >
-	<div style= "font-size:3em; text-align:center;">봉사현황</div>
-	<div style= "font-size:1.5em; text-align:center;"><li>
+<font size="4" ><br>
+	<div style= "font-size:2em; text-align:center;"><hr>사이트 이용현황<hr></div><br><br>
+	<div style= "font-size:1.5em; text-align:center;">
 	총 회원 수는 
 <?php
 		echo "<B> $usercnt  </B>";
 ?>
-	명 입니다.
+	명 으로
 
-	</li></div>
-	<br>
-		<div style= "font-size:1.5em; text-align:center;"><li>
-	총 사용자 수는 
+	</div>
+	<br>	<br>
+		<div style= "font-size:1.5em; text-align:center;">
+	사용자 수는 
 <?php
 		echo "<B> $auser  </B>";
 ?>
-	명 이고 총 봉사자 수는 
+	명 / 봉사자 수는 
 <?php
 		echo "<B> $buser  </B>";
 ?>
- 입니다.
-	</li></div>
-	<br>
-	
-			<ul>
-				<li>
-					<div style="text-align:center;">
-						전체 봉사활동 건수
-						<?php echo "$volcnt"; ?>
-						<span>건</span>
-					</div> 
-				</li>
-			  
-				
-			</ul>
-    
-		<br>
+ 명 입니다.
+	<br><br><br>
+	현재 봉사자를 모집중인 봉사활동은
+	<?php
+		echo "<B>$volcnt</B>";
+?>
+건 입니다<br><br><br>사이트를 이용해 주셔서 감사합니다
+</div>
+
+
 	
 
 	</body>
 <br><br><br><br><br>
-<hr>
-<div style= "text-align:center;">고객문의 000-000-0000<BR><BR></div>
+
+
 	
-<div style= "text-align:center;"><font size="1" color=""><BR>@capston 8team helping</font></div>
+
 </html>	
 <br><br><br><br><br><br><br><br><br>
 <hr>
