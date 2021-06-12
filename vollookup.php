@@ -1,15 +1,4 @@
-<?php
 
-session_start(); 
-include ("connect_db.php"); 
-
-	$inid= $_SESSION['id'];
-	
-	$sql = "select * from volcontents where id='$inid' ";                      
-	$result = mysqli_query ($connect, $sql);          
-	$count = mysqli_num_fields($result);
-	mysqli_close($connect);   
-?>
 <!DOCTYPE html>
 
 <html>
@@ -30,21 +19,17 @@ include ("connect_db.php");
 <body>
 <form name=appvol method=post action="app_db.php">
 <div id="home" class="big-bg">
- <header class="page-header wrapper">
-  <h1><a href="alogmain.php"><br><img class="logo" src="files/mainlogo.svg" alt="사이트 홈"></a></h1>
-  <nav>
-   <ul class="main-nav">
+ <?php include "header.php";
+include ("connect_db.php"); 
 
-    <li><a href="aGuide.html">소개  </a></li>
-   <li><a href="notice.php">구인구직</a></li>
-   <li><a href="Vinfor.php">봉사현황</a></li>
-   <li><a href="Service.html">고객센터</a></li>
-    <li><a href="informod.php">내정보</a></li>
-  <li><a href="blogmain.html" onclick="alert('로그아웃 되었습니다');">로그아웃</a></li>
-
-   </ul>
-   </nav>
-   </header>
+	$inid= $_SESSION['id'];
+	
+	$sql = "select * from volcontents where id='$inid' ";                      
+	$result = mysqli_query ($connect, $sql);          
+	$count = mysqli_num_fields($result);
+	mysqli_close($connect);   
+?>
+ 
  <div id="board_area"> 
 
   <center><br><br><br><h1><?php echo $_SESSION['id']; ?> 님이 수료한 봉사내역</h1>
