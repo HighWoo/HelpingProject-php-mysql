@@ -21,10 +21,10 @@
   <input type="submit" name="login" value="Login" class="button"><br><br>
 </form>
 
-<HR size=4>
+
 회원가입을 원하세요?
 <A href="Signup.php"><font size="4" color="#b07f72">[회원가입]</font></A><BR><BR>
-Helping본사 000-000-0000<BR><BR>
+
 <font size="1" color=""></font>
 </p>
 	
