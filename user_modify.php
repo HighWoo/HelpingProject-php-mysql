@@ -17,6 +17,6 @@
       $query = "UPDATE user SET pw='$userpw', adr='$useraddr', phone='$phonenum' WHERE id='$_SESSION[id]'";
       $result = mysqli_query($connect, $query);
       echo "<script>window.alert('정보 수정을 완료했습니다.');</script>"; 
-      echo "<script>location.href='alogmain.html';</script>";
+      echo "<script>location.href='alogmain.php';</script>";
      }
 ?>

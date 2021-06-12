@@ -10,7 +10,15 @@
  </head>
 <body>
 <div id="home" class="big-bg">
- <?php include "header.php" ?>
+ <?php include "header.php"; 
+ $id=$_SESSION['id'];
+ include ("connect_db.php"); 
+ $query = "select * from user where id ='$id'";
+ $result = $connect->query($query);
+ $rows = mysqli_fetch_array($result);
+ echo $rows['adr'];
+ 
+ ?>
   
 <br><div style= "font-size:3em; color:#b07f72; text-align:center;">[정보수정]</div>
 <hr>
@@ -24,11 +32,10 @@
 <FORM action=user_modify.php method=post name=form1 onsubmit="return check();"><BR>
 
 	
-	
 	<strong><div style="text-align:center">비밀번호</strong></div> 	<div style="text-align:center"><INPUT type="password" name="userpw" placeholder="비밀번호" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
 	<strong>비밀번호확인</strong>	<div style="text-align:center"><INPUT type="password" name="userpwr" placeholder="비밀번호재입력" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>주소</strong>	<div style="text-align:center"> <INPUT type="text" name="useraddr" placeholder="기존 주소 띄울 것" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
-	<strong>전화번호</strong>	<div style="text-align:center"> <INPUT type="text" name="phonenum" placeholder="기존 전화번호 띄울것" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
+	<strong>주소</strong>	<div style="text-align:center"> <INPUT type="text" name="useraddr" value="<?php echo $rows['adr']; ?>" placeholder="<?php echo $rows['adr']; ?>" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
+	<strong>전화번호</strong>	<div style="text-align:center"> <INPUT type="text" name="phonenum" value="<?php echo $rows['phone']; ?>" placeholder="<?php echo $rows['phone']; ?>" style="WIDTH: 170pt; HEIGHT: 20pt; color:#7ea9d4; background:white; font-size:1.0em;"><BR><BR>
 	
 	
 	
