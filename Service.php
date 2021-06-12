@@ -37,15 +37,15 @@
 <body>
 <div id="home" class="big-bg">
  <?php include "header.php" ?>
-  <H1 align=center> 고객센터 페이지 </H1>
+  <H1 align=center><br> 고객센터 </H1>
   <?php
   include ("connect_db.php");
   $query ="select * from question order by number desc";
   $result = $connect->query($query);
   $total = mysqli_num_rows($result);
   ?>
-  <h2 align=center>문의 게시판</h2>
-  <h3 align=center>이곳은 자원봉사자나 사용자의 궁금한 사항을 문의를 하는 곳 입니다.</h3>
+  <h2 align=center>문의 게시판</h2><br>
+  <h3 align=center>이곳은 궁금한 사항을 문의 하는 곳 입니다.</h3>
         <table align = center>
         <thead align = "center">
         <tr>

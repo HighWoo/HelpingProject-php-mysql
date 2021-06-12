@@ -18,17 +18,7 @@
  <?php include "header.php" ?>
  
           <br>
-  <?php
-echo "<p align='right' style='font-size:20px' >";
-echo "  -----[      ";
-echo  $_SESSION['voru'];
 
-echo "    ";
-echo  $_SESSION['name'];
-echo  " 님 환영합니다 ]-----";
-	
-echo "</p>";
-?>
    
    <div class="home-content wrapper">
    
