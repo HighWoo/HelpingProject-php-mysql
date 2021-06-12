@@ -7,6 +7,6 @@ else if($_SESSION['voru']=="사용자"){
 	echo "<script>location.href='newvol.php';</script>";
 }
 else{
-	echo "<script>window.alert('ERROR');</script>"; 
+	echo "<script>location.href='Login.php';</script>"; 
 }
 ?>
