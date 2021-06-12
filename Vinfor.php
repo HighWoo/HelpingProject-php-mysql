@@ -44,7 +44,7 @@
 <body>
 <div id="home" class="big-bg">
  <?php include "header.php" ?>
-<font size="4" ><br>
+<font size="4" ><br><br><br>
 	<div style= "font-size:2em; text-align:center;"><hr>사이트 이용현황<hr></div><br><br>
 	<div style= "font-size:1.5em; text-align:center;">
 	총 회원 수는 
@@ -77,13 +77,13 @@
 	
 
 	</body>
-<br><br><br><br><br>
+
 
 
 	
 
 </html>	
-<br><br><br><br><br><br><br><br><br>
-<hr>
+
+
              
              
