@@ -17,6 +17,12 @@
 
        <br>
   <?php
+  
+  $id="";
+
+    if( isset($_SESSION['id'])) $id= $_SESSION['id'];
+    
+    if($id){
 echo "<p align='right' style='font-size:20px' >";
 echo "  -----[      ";
 echo  $_SESSION['voru'];
@@ -26,6 +32,8 @@ echo  $_SESSION['name'];
 echo  " 님 환영합니다 ]-----";
 	
 echo "</p>";
+
+}
 ?>
   
    <div class="home-content wrapper">
