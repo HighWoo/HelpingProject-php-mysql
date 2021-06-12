@@ -49,8 +49,7 @@ mysqli_query($connect,$sql);
       $sex="여자";
       }
 	  
-	  echo $age;
-	  echo $sex;
+	
 	  $sql2="update user set age='$age',sex='$sex' where id='$id'";
 	  mysqli_query($connect,$sql2);
 	  mysqli_close($connect);
