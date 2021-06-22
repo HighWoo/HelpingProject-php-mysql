@@ -42,7 +42,7 @@ a/blogmain,signup 소스코드 수정
 ### <6차 5/17> 
 ### 박상우
 Login.php에서 함수를 제작하여 비밀번호동일여부와 아이디 중복여부를 판단하는 함수제작
-아이디 중복여부를 판단하는 php 제작(logcheck.php)
+아이디 중복여부를 판단하는 php 제작([logcheck.php](./logcheck.php))
 Logcheck.php에서 세션을 적용하여 로그인 제작
 Logtest.php에서 로그인된 사용자의 이름과 아이디 출력(test)
 Logout.php에서 세션종료와 함께 로그아웃 실행
