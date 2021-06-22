@@ -41,11 +41,11 @@ a/blogmain,signup 소스코드 수정
 
 ### <6차 5/17> 
 ### 박상우
-Login.php에서 함수를 제작하여 비밀번호동일여부와 아이디 중복여부를 판단하는 함수제작
-아이디 중복여부를 판단하는 php 제작([logcheck.php](./logcheck.php))
-Logcheck.php에서 세션을 적용하여 로그인 제작
-Logtest.php에서 로그인된 사용자의 이름과 아이디 출력(test)
-Logout.php에서 세션종료와 함께 로그아웃 실행
+[Login.php](./login.php)에서 함수를 제작하여 비밀번호동일여부와 아이디 중복여부를 판단하는 함수제작
+[logcheck.php](./logcheck.php)아이디 중복여부를 판단하는 php 제작
+[Logcheck.php](./logcheck.php)에서 세션을 적용하여 로그인 제작
+[Logtest.php](./logtest.php)에서 로그인된 사용자의 이름과 아이디 출력(test)
+[Logout.php](./logout.php)에서 세션종료와 함께 로그아웃 실행
 
 다음목표: 페이지 이동 최적화
 
@@ -54,7 +54,7 @@ Logout.php에서 세션종료와 함께 로그아웃 실행
 
 ### 박상우,김찬영
 -매칭시스템 코딩을 위해 데이터 베이스를 기존과 달리 외래키를 이용하여 제작  
-사용자의정보-user테이블/지원정보-volapp테이블/봉사내용-volcontents테이블  
+사용자의정보-[user테이블](./database/user.sql)/지원정보-volapp테이블/봉사내용-volcontents테이블  
 내가 생성한 봉사활동/내가 신청한 봉사활동 출력(mycreatevol.php,myappvol.php)  
 생성된 봉사의 제목 클릭시 get형식으로 정보 넘겨주어 출력하는 코드 작성  
 
