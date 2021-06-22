@@ -41,11 +41,11 @@ a/blogmain,signup 소스코드 수정
 
 ### <6차 5/17> 
 ### 박상우
-[Login.php](./login.php)에서 함수를 제작하여 비밀번호동일여부와 아이디 중복여부를 판단하는 함수제작
-[logcheck.php](./logcheck.php)아이디 중복여부를 판단하는 php 제작
-[Logcheck.php](./logcheck.php)에서 세션을 적용하여 로그인 제작
-[Logtest.php](./logtest.php)에서 로그인된 사용자의 이름과 아이디 출력(test)
-[Logout.php](./logout.php)에서 세션종료와 함께 로그아웃 실행
+[Login.php](./login.php)에서 함수를 제작하여 비밀번호동일여부와 아이디 중복여부를 판단하는 함수제작  
+[logcheck.php](./logcheck.php)아이디 중복여부를 판단하는 php 제작  
+[Logcheck.php](./logcheck.php)에서 세션을 적용하여 로그인 제작  
+[Logtest.php](./logtest.php)에서 로그인된 사용자의 이름과 아이디 출력(test)  
+[Logout.php](./logout.php)에서 세션종료와 함께 로그아웃 실행  
 
 다음목표: 페이지 이동 최적화
 
@@ -54,13 +54,13 @@ a/blogmain,signup 소스코드 수정
 
 ### 박상우,김찬영
 -매칭시스템 코딩을 위해 데이터 베이스를 기존과 달리 외래키를 이용하여 제작  
-사용자의정보-[user테이블](./database/user.sql)/지원정보-volapp테이블/봉사내용-volcontents테이블  
-내가 생성한 봉사활동/내가 신청한 봉사활동 출력(mycreatevol.php,myappvol.php)  
+사용자의정보-[user테이블](./database/user.sql)/지원정보-[volapp테이블](./database/volapp.sql)/봉사내용-[volcontents테이블](./database/volcontents.sql)  
+내가 생성한 봉사활동/내가 신청한 봉사활동 출력([mycreatevol.php](./mycreatevol.php),[myappvol.php](./myappvol.php))  
 생성된 봉사의 제목 클릭시 get형식으로 정보 넘겨주어 출력하는 코드 작성  
 
 ### 박상우(추가)
 -테이블 출력을 위한 기본 css작성,상단 공백 제거를 위한 css작성
--내정보를 비밀번호를 입력해야만 들어갈 수 있도록 작성(informodlogin.php)
+-내정보를 비밀번호를 입력해야만 들어갈 수 있도록 작성([informodlogin.php](./informodlogin.php))
 
 ### 강재은
 -고객센터 페이지 제작,정보수정작성
@@ -69,10 +69,10 @@ a/blogmain,signup 소스코드 수정
 ### <8차 5/31>매칭시스템 마무리,최종 테스트 전 마지막 코드작성
 
 ### 박상우,김찬영 
--지원하기 클릭시 volapp테이블 안에 봉사num과 지원자 아이디 등록하는 코드 작성(appvol.php ,app_db.php)  
-지원한 봉사활동을 수락할때 사용자가 선택할 수 있도록 라디오 버튼 생성, 수락하기 누를시 선택된 사람을 제외한 나머지 인원에게는 매칭실패를 알려줌(volunteers.php,choval.php)  
-매칭이 완료됨을 알리는 화면(봉사자의 정보를 사용자에게 보여주는 화면 (matchingend_user.php)  
-선택된 봉사자는 마지막 확인버튼을 클릭하여 봉사활동에 지원한 모든 사용자들의 정보를 삭제(matchingend_vol.php)  
+-지원하기 클릭시 volapp테이블 안에 봉사num과 지원자 아이디 등록하는 코드 작성([appvol.php](./appvol.php) ,[app_db.php](./app_db.php))  
+지원한 봉사활동을 수락할때 사용자가 선택할 수 있도록 라디오 버튼 생성, 수락하기 누를시 선택된 사람을 제외한 나머지 인원에게는 매칭실패를 알려줌([volunteers.php](./volunteers.php),[choval.php](./choval.php))  
+매칭이 완료됨을 알리는 화면(봉사자의 정보를 사용자에게 보여주는 화면 ([matchingend_user.php](./matchingend_user.php))  
+선택된 봉사자는 마지막 확인버튼을 클릭하여 봉사활동에 지원한 모든 사용자들의 정보를 삭제([matchingend_vol.php](./matchingend_vol.php))  
 
 ### 강재은
 -헤더파일 작성,주민번호->나이추출 알고리즘 작성
