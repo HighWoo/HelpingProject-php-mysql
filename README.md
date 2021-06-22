@@ -15,9 +15,9 @@
 ---
 
 ### <5차 5/11> 강재은
-- User.html, Umat.php, Vol.html, Vmat.php 업로드 완료현재 구인게시판 등록할 수 있으며 구직게시판 틀만 잡음(삭제)
+-User.html, Umat.php, Vol.html, Vmat.php 업로드 완료현재 구인게시판 등록할 수 있으며 구직게시판 틀만 잡음(삭제)
 ### <5차 5/11> 박상우
-- Signup.php와user.db연동하여 회원등록이 가능하게 제작완료
+-Signup.php와user.db연동하여 회원등록이 가능하게 제작완료
 ### <5차 5/11> 김찬영
 -Guide.html(사이트소개) ,Vinfor.html(봉사현황),informch.html(정보수정), Vollookup.html(봉사활동 내역조회), informodlogin.html(내정보 비밀번호 입력), informod.html(내정보) 의 페이지 디자인 통합 및 수정
 
