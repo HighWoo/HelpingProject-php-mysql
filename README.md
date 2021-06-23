@@ -4,7 +4,7 @@
 ### 팀장:박상우 , 설명서,Readme,보고서 작성자 : 박상우
 ### 자세한 사항은 [최종보고서](./helping최종보고서.hwp) 참조
 ### 팀 프로젝트로 팀원은 대학동기 강재은,김찬영,박상우 
-### [프로그램 구동영상](/https://youtu.be/KGzMOFgpUbI)
+### [프로그램 구동영상](https://youtu.be/KGzMOFgpUbI)
 
 
 ### <1차 4/12>  - Login.html(로그인) , Signup.html(회원가입) 기본틀 작성 , 아이콘 제작 , Main.html기본틀 제작
